@@ -49,7 +49,7 @@ function showSuccessScreen(form, email) {
    Enter: qweb.marketings@gmail.com → get key → paste here
    ============================================================ */
 
-const WEB3_KEY = 'YOUR_WEB3FORMS_KEY'; // ← ONLY THING YOU NEED TO CHANGE
+const WEB3_KEY = '23381280-d7b8-4ad5-b1c4-815964a063cd'; // ← ONLY THING YOU NEED TO CHANGE
 
 // ── SERVICE DATA ──
 const SD = {
