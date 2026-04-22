@@ -662,6 +662,21 @@
   <input type="tel" name="phone" placeholder="Enter phone number" required>
 </div>
         <div class="pf-g"><label>Project Details</label><textarea name="message" rows="4" placeholder="Tell us about your project..."></textarea></div>
+<div class="pf-g"><label>Service Interested In *</label><select name="service" required>
+          <option value="">Select a service...</option>
+          <option value="WordPress Design">WordPress Website Design</option>
+          <option value="Wix Development">Wix Development</option>
+          <option value="Webflow Development">Webflow Development</option>
+          <option value="Shopify Development">Shopify Development</option>
+          <option value="Framer Development">Framer Development</option>
+          <option value="Social Media Marketing">Social Media Marketing</option>
+          <option value="SEO Services">SEO Services</option>
+          <option value="Graphics Design">Graphics Design</option>
+          <option value="Email Marketing">Email Marketing</option>
+          <option value="Video Editing">Video Editing</option>
+          <option value="Multiple Services">Multiple Services</option>
+          <option value="Not Sure Yet">Not Sure Yet</option>
+        </select></div>
         <div class="pf-g"><label>Budget Range</label><select name="budget"><option value="">Select budget range</option><option>$500 – $1,500</option><option>$1,500 – $5,000</option><option>$5,000 – $15,000</option><option>$15,000+</option></select></div>
         <button type="submit" class="btn-primary btn-form-submit">Send Message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg></button>
         <div class="form-st" id="contactSt"></div>
@@ -773,6 +788,21 @@
         <div class="pf-row"><div class="pf-g"><label>Preferred Date *</label><input type="date" name="date" required></div><div class="pf-g"><label>Preferred Time *</label><input type="time" name="time" required></div></div>
         <div class="pf-g"><label>Your Timezone (auto-detected)</label><input type="text" name="timezone" id="tzField" readonly style="cursor:default;opacity:.65"></div>
         <div class="pf-g"><label>Project Details</label><textarea name="message" rows="3" placeholder="What are you working on?"></textarea></div>
+<div class="pf-g"><label>Service Interested In *</label><select name="service" required>
+          <option value="">Select a service...</option>
+          <option value="WordPress Design">WordPress Website Design</option>
+          <option value="Wix Development">Wix Development</option>
+          <option value="Webflow Development">Webflow Development</option>
+          <option value="Shopify Development">Shopify Development</option>
+          <option value="Framer Development">Framer Development</option>
+          <option value="Social Media Marketing">Social Media Marketing</option>
+          <option value="SEO Services">SEO Services</option>
+          <option value="Graphics Design">Graphics Design</option>
+          <option value="Email Marketing">Email Marketing</option>
+          <option value="Video Editing">Video Editing</option>
+          <option value="Multiple Services">Multiple Services</option>
+          <option value="Not Sure Yet">Not Sure Yet</option>
+        </select></div>
         <div class="pf-g"><label>Budget Range</label><select name="budget"><option value="">Select budget range</option><option>$500 – $1,500</option><option>$1,500 – $5,000</option><option>$5,000 – $15,000</option><option>$15,000+</option></select></div>
         <button type="submit" class="btn-primary btn-form-submit">Book My Free Strategy Call →</button>
         <div class="form-st" id="consultSt"></div>
@@ -804,6 +834,77 @@
     <div class="ft-bottom"><p>© 2025 Qweb Marketing. All rights reserved. | 79 Theodore St., Buffalo, NY</p><p>Web Design &amp; Digital Marketing Agency – Buffalo, NY</p></div>
   </div>
 </footer>
+
+
+<!-- ══ MOBILE NAV OVERLAY ══ -->
+<div class="mob-nav-overlay" id="mobNavOverlay" onclick="closeNav()"></div>
+
+<!-- ══ MOBILE NAV DRAWER ══ -->
+<div class="mob-drawer" id="mobDrawer">
+  <div class="mob-drawer-hdr">
+    <a href="#" class="logo-mark" onclick="return nav('home')">
+      <div class="logo-q">Q</div>
+      <span class="logo-name">Qweb <em>Marketing</em></span>
+    </a>
+    <button class="mob-close-btn" onclick="closeNav()" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <nav class="mob-nav-links">
+    <a href="#" class="mob-link" onclick="return nav('home')">
+      <span>Home</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><polyline points="9,18 15,12 9,6"/></svg>
+    </a>
+    <a href="#" class="mob-link" onclick="return nav('about')">
+      <span>About</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><polyline points="9,18 15,12 9,6"/></svg>
+    </a>
+    <div class="mob-link-group">
+      <button class="mob-link mob-link-toggle" onclick="toggleMobDrop(this)">
+        <span>Services</span>
+        <svg class="mob-drop-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14"><polyline points="6,9 12,15 18,9"/></svg>
+      </button>
+      <div class="mob-drop-items">
+        <a href="#" class="mob-sub-link" onclick="return nav('service-wordpress')">WordPress Design</a>
+        <a href="#" class="mob-sub-link" onclick="return nav('service-wix')">Wix Development</a>
+        <a href="#" class="mob-sub-link" onclick="return nav('service-webflow')">Webflow Development</a>
+        <a href="#" class="mob-sub-link" onclick="return nav('service-shopify')">Shopify Development</a>
+        <a href="#" class="mob-sub-link" onclick="return nav('service-framer')">Framer Development</a>
+        <a href="#" class="mob-sub-link" onclick="return nav('service-smm')">Social Media Marketing</a>
+        <a href="#" class="mob-sub-link" onclick="return nav('service-seo')">SEO Services</a>
+        <a href="#" class="mob-sub-link" onclick="return nav('service-graphics')">Graphics Design</a>
+        <a href="#" class="mob-sub-link" onclick="return nav('service-email')">Email Marketing</a>
+        <a href="#" class="mob-sub-link" onclick="return nav('service-video')">Video Editing</a>
+      </div>
+    </div>
+    <a href="#" class="mob-link" onclick="return nav('portfolio')">
+      <span>Portfolio</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><polyline points="9,18 15,12 9,6"/></svg>
+    </a>
+    <a href="#" class="mob-link" onclick="return nav('contact')">
+      <span>Contact</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><polyline points="9,18 15,12 9,6"/></svg>
+    </a>
+  </nav>
+
+  <div class="mob-drawer-contact">
+    <a href="https://wa.me/17165734618" class="mob-contact-row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 012.09 4.18 2 2 0 014.07 2h3a2 2 0 012 1.72 13 13 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 13 13 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      +1 (716) 573-4618
+    </a>
+    <a href="mailto:qweb.marketings@gmail.com" class="mob-contact-row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      qweb.marketings@gmail.com
+    </a>
+  </div>
+
+  <div class="mob-drawer-cta">
+    <a href="#" class="btn-primary" onclick="return nav('consultancy')" style="color:#fff!important;display:flex;width:100%;justify-content:center;padding:14px;border-radius:10px;font-size:.92rem;font-weight:600">
+      Book Free Strategy Call →
+    </a>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
