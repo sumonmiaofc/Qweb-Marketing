@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qweb Marketing | Web Design & Digital Marketing Agency</title>
+<meta name="description" content="Buffalo's premier web design & digital marketing agency. WordPress, Shopify, Webflow, SEO, and social media marketing. 5+ years · 150+ projects · Real results.">
+<meta name="keywords" content="web design agency Buffalo NY, digital marketing Buffalo, SEO services, Shopify development, Webflow agency, social media marketing">
+<meta property="og:title" content="Qweb Marketing | Web Design & Digital Marketing Agency">
+<meta property="og:description" content="We design, build, and market digital experiences that convert. Buffalo, NY · 5+ years · 150+ projects.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231B5BFF'/%3E%3Ctext x='16' y='22' font-size='18' text-anchor='middle' fill='white' font-family='Arial Black%2C sans-serif' font-weight='900'%3EQ%3C/text%3E%3C/svg%3E">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- FLOATING -->
+<a href="https://wa.me/17165734618" target="_blank" class="wa-btn" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<button class="btt-btn" id="bttBtn" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18,15 12,9 6,15"/></svg>
+</button>
+<div class="mob-cta-bar">
+  <a href="#" class="btn-primary" onclick="return nav('consultancy')">Book Free Strategy Call →</a>
+</div>
+
+<!-- HEADER -->
+<header id="hdr">
+  <div class="hdr-inner">
+    <a href="#" class="logo-mark" onclick="return nav('home')">
+      <div class="logo-q">Q</div>
+      <span class="logo-name">Qweb <em>Marketing</em></span>
+    </a>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#" onclick="return nav('home')" data-p="home">Home</a></li>
+      <li><a href="#" onclick="return nav('about')" data-p="about">About</a></li>
+      <li class="has-drop">
+        <a href="#" data-p="services">Services <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6,9 12,15 18,9"/></svg></a>
+        <div class="drop-panel">
+          <a href="#" onclick="return nav('service-wordpress')">WordPress Design</a>
+          <a href="#" onclick="return nav('service-wix')">Wix Development</a>
+          <a href="#" onclick="return nav('service-webflow')">Webflow Development</a>
+          <a href="#" onclick="return nav('service-shopify')">Shopify Development</a>
+          <a href="#" onclick="return nav('service-framer')">Framer Development</a>
+          <a href="#" onclick="return nav('service-smm')">Social Media Marketing</a>
+          <a href="#" onclick="return nav('service-seo')">SEO Services</a>
+          <a href="#" onclick="return nav('service-graphics')">Graphics Design</a>
+          <a href="#" onclick="return nav('service-email')">Email Marketing</a>
+          <a href="#" onclick="return nav('service-video')">Video Editing</a>
+        </div>
+      </li>
+      <li><a href="#" onclick="return nav('portfolio')" data-p="portfolio">Portfolio</a></li>
+      <li><a href="#" onclick="return nav('contact')" data-p="contact">Contact</a></li>
+    </ul>
+
+    <div class="hdr-right">
+      <div class="hdr-socials">
+        <a href="https://www.linkedin.com/company/qweb-marketing/" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://www.behance.net/qwebmarketing" target="_blank" aria-label="Behance">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.799 5.698c.589 0 1.12.051 1.606.156.482.102.894.273 1.241.507.344.235.612.546.804.938.188.387.281.871.281 1.443 0 .62-.14 1.138-.421 1.551-.284.413-.7.753-1.243 1.01.749.218 1.311.601 1.676 1.146.362.549.548 1.21.548 1.981 0 .623-.12 1.161-.359 1.612a3.257 3.257 0 01-.979 1.114 4.418 4.418 0 01-1.435.65 6.441 6.441 0 01-1.659.213H2V5.698h5.799zm-.351 4.763c.48 0 .878-.114 1.188-.341.308-.229.463-.583.463-1.07 0-.27-.049-.494-.147-.671a1.114 1.114 0 00-.394-.426 1.72 1.72 0 00-.571-.225 3.078 3.078 0 00-.682-.072H4.574v2.805h2.874zm.157 4.927c.267 0 .521-.025.76-.077.242-.053.455-.14.637-.261.182-.12.329-.283.44-.491.109-.207.163-.475.163-.798 0-.634-.179-1.085-.535-1.358-.356-.27-.829-.407-1.416-.407H4.574v3.392h3.031zM19.611 16.682c.352.343.863.515 1.523.515.474 0 .882-.119 1.225-.353.341-.237.55-.488.626-.756h2.371c-.379 1.178-.96 2.021-1.737 2.527-.779.504-1.723.757-2.827.757-.767 0-1.457-.123-2.071-.37a4.469 4.469 0 01-1.571-1.047 4.65 4.65 0 01-.989-1.611 5.8 5.8 0 01-.347-2.014c0-.72.118-1.386.357-2.002.239-.614.581-1.147 1.023-1.596a4.717 4.717 0 011.579-1.058c.613-.253 1.292-.381 2.04-.381.832 0 1.561.161 2.188.479.625.32 1.138.752 1.536 1.295.398.545.682 1.168.852 1.868.169.699.224 1.437.162 2.213h-7.072c.042.85.307 1.47.659 1.814zm2.657-4.826c-.283-.312-.73-.468-1.337-.468-.389 0-.714.065-.972.196a1.894 1.894 0 00-.635.499 1.887 1.887 0 00-.336.664c-.065.237-.105.473-.117.708h3.969c-.107-.68-.289-1.287-.572-1.599zM16.35 8.749h4.543V7.5H16.35v1.249z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2.5"/></svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61580533795315" target="_blank" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+      </div>
+      <a href="#" class="btn-primary btn-sm" onclick="return nav('consultancy')">Book Free Strategy Call</a>
+    </div>
+    <button class="hbg" id="hbg" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- APP -->
+<div id="app">
+
+<!-- ══════════ HOME ══════════ -->
+<div id="pg-home" class="pg active">
+
+  <!-- HERO -->
+  <section class="hero-wrap">
+    <canvas id="pcv"></canvas>
+    <div class="hero-glow g1"></div>
+    <div class="hero-glow g2"></div>
+    <div class="hero-glow g3"></div>
+
+    <div class="hero-layout">
+      <!-- LEFT -->
+      <div class="hero-left">
+        <div class="hero-pill reveal">
+          <span class="hp-dot"></span>
+          Buffalo's Premier Digital Agency · 5+ Years
+        </div>
+
+        <h1 class="hero-h1 reveal">
+          We Turn Clicks Into<br>
+          <span class="h1-line2">Paying <span class="grad">Clients.</span></span>
+        </h1>
+
+        <p class="hero-p reveal">
+          Premium web design, SEO &amp; performance marketing engineered
+          to grow your revenue — not just your traffic.
+        </p>
+
+        <div class="hero-btns reveal">
+          <a href="#" class="btn-primary btn-md" onclick="return nav('consultancy')">
+            Book Free Strategy Call
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#" class="btn-ghost btn-md" onclick="return nav('portfolio')">
+            View Our Work
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="9,18 15,12 9,6"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-trust reveal">
+          <div class="trust-avs">
+            <div class="tav" style="background:linear-gradient(135deg,#1B5BFF,#5b8dff)">JM</div>
+            <div class="tav" style="background:linear-gradient(135deg,#7c3aed,#a855f7)">SR</div>
+            <div class="tav" style="background:linear-gradient(135deg,#059669,#34d399)">DK</div>
+            <div class="tav" style="background:linear-gradient(135deg,#d97706,#fbbf24)">AN</div>
+          </div>
+          <div class="trust-txt">
+            <div class="trust-stars">★★★★★</div>
+            <span>Trusted by <strong>40+ businesses</strong> across the US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT VISUAL -->
+      <div class="hero-right reveal">
+        <div class="hero-card">
+          <div class="hc-top">
+            <div class="hc-dot rd"></div><div class="hc-dot yl"></div><div class="hc-dot gn"></div>
+            <span class="hc-title">Growth Dashboard · Q4 2024</span>
+          </div>
+          <div class="hc-chart">
+            <div class="chart-bars">
+              <div class="cbar" style="--h:40%;--c:#1B5BFF22"><span>Jan</span></div>
+              <div class="cbar" style="--h:55%;--c:#1B5BFF33"><span>Feb</span></div>
+              <div class="cbar" style="--h:45%;--c:#1B5BFF22"><span>Mar</span></div>
+              <div class="cbar" style="--h:70%;--c:#1B5BFF44"><span>Apr</span></div>
+              <div class="cbar" style="--h:60%;--c:#1B5BFF33"><span>May</span></div>
+              <div class="cbar" style="--h:85%;--c:#1B5BFF55"><span>Jun</span></div>
+              <div class="cbar active" style="--h:100%;--c:#1B5BFF"><span>Jul</span></div>
+            </div>
+            <div class="chart-line"></div>
+          </div>
+          <div class="hc-metrics">
+            <div class="hc-metric">
+              <span class="hcm-val">+312%</span>
+              <span class="hcm-lbl">Organic Traffic</span>
+            </div>
+            <div class="hc-divider"></div>
+            <div class="hc-metric">
+              <span class="hcm-val">+247%</span>
+              <span class="hcm-lbl">Revenue Growth</span>
+            </div>
+            <div class="hc-divider"></div>
+            <div class="hc-metric">
+              <span class="hcm-val">4.2%</span>
+              <span class="hcm-lbl">Avg CVR</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating badges -->
+        <div class="float-badge fb1">
+          <svg viewBox="0 0 24 24" fill="#34d399" width="16"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01" stroke="#34d399" fill="none" stroke-width="2"/></svg>
+          <span>SEO Rank #1 · Morrison Legal</span>
+        </div>
+        <div class="float-badge fb2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" width="15"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <span>5.0 · 40+ Client Reviews</span>
+        </div>
+        <div class="float-badge fb3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1B5BFF" stroke-width="2" width="15"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          <span>150+ Projects Delivered</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS BAR -->
+    <div class="hero-statsbar reveal">
+      <div class="hsb-item"><span class="hsb-n" data-target="150">0</span><sup>+</sup><p>Projects</p></div>
+      <div class="hsb-sep"></div>
+      <div class="hsb-item"><span class="hsb-n" data-target="40">0</span><sup>+</sup><p>Happy Clients</p></div>
+      <div class="hsb-sep"></div>
+      <div class="hsb-item"><span class="hsb-n" data-target="5">0</span><sup>+</sup><p>Years Experience</p></div>
+      <div class="hsb-sep"></div>
+      <div class="hsb-item"><span class="hsb-n" data-target="98">0</span><sup>%</sup><p>Client Retention</p></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="sec-hdr reveal">
+        <span class="tag-pill">What We Do</span>
+        <h2>Full-Stack Digital Services<br><span class="grad">Built Around Your Growth</span></h2>
+        <p>From pixel-perfect websites to performance marketing — every service is engineered for measurable results.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-card reveal" onclick="return nav('service-wordpress')"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></div><h3>WordPress Design</h3><p>Custom, high-performance WordPress sites that rank, convert, and are easy to manage.</p><span class="svc-cta">Request Service →</span></div>
+        <div class="svc-card reveal" onclick="return nav('service-wix')"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div><h3>Wix Development</h3><p>Beautiful Wix sites with advanced animations, bookings, and eCommerce functionality.</p><span class="svc-cta">Request Service →</span></div>
+        <div class="svc-card reveal" onclick="return nav('service-webflow')"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16,18 22,12 16,6"/><polyline points="8,6 2,12 8,18"/></svg></div><h3>Webflow Development</h3><p>Award-worthy Webflow sites with scroll interactions, CMS, and SEO architecture.</p><span class="svc-cta">Request Service →</span></div>
+        <div class="svc-card reveal" onclick="return nav('service-shopify')"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div><h3>Shopify Development</h3><p>Revenue-first Shopify stores built to convert browsers into buyers, consistently.</p><span class="svc-cta">Request Service →</span></div>
+        <div class="svc-card reveal" onclick="return nav('service-framer')"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 5h14v6H5z"/><path d="M5 11h7v7l-7-7z"/></svg></div><h3>Framer Development</h3><p>Cutting-edge Framer sites with jaw-dropping motion and blazing-fast performance.</p><span class="svc-cta">Request Service →</span></div>
+        <div class="svc-card reveal" onclick="return nav('service-smm')"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div><h3>Social Media Marketing</h3><p>Data-driven social strategies that build real audiences and generate qualified leads.</p><span class="svc-cta">Request Service →</span></div>
+        <div class="svc-card reveal" onclick="return nav('service-seo')"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div><h3>SEO Services</h3><p>Dominate Google with technical SEO, content strategy, and authority link building.</p><span class="svc-cta">Request Service →</span></div>
+        <div class="svc-card reveal" onclick="return nav('service-graphics')"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3>Graphics Design</h3><p>Brand identities and creative assets that stop the scroll and tell your story perfectly.</p><span class="svc-cta">Request Service →</span></div>
+        <div class="svc-card reveal" onclick="return nav('service-email')"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><h3>Email Marketing</h3><p>Automated campaigns that nurture leads and drive repeat revenue on autopilot.</p><span class="svc-cta">Request Service →</span></div>
+        <div class="svc-card reveal" onclick="return nav('service-video')"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23,7 16,12 23,17"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div><h3>Video Editing</h3><p>Professional video production for ads, reels, and compelling brand storytelling.</p><span class="svc-cta">Request Service →</span></div>
+      </div>
+      <div style="text-align:center;margin-top:2.5rem"><a href="#" class="btn-outline btn-md reveal" onclick="return nav('services')">View All Services →</a></div>
+    </div>
+  </section>
+
+  <!-- ABOUT PREVIEW -->
+  <section class="section about-prev">
+    <div class="container">
+      <div class="ap-grid">
+        <div class="ap-visual reveal">
+          <div class="ap-noimg-card team-visual-card">
+            <div class="anc-glow"></div>
+            <!-- Header bar -->
+            <div class="anc-topbar">
+              <div class="anc-dots"><span class="rd"></span><span class="yl"></span><span class="gn"></span></div>
+              <span class="anc-topbar-title">Qweb Marketing · Team Overview</span>
+            </div>
+            <!-- Stat rows -->
+            <div class="anc-stats-grid">
+              <div class="anc-stat"><div class="anc-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><div class="anc-stat-body"><span class="anc-stat-val">2 Core Experts</span><span class="anc-stat-lbl">Strategy + Development</span></div></div>
+              <div class="anc-stat"><div class="anc-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div><div class="anc-stat-body"><span class="anc-stat-val">5+ Years</span><span class="anc-stat-lbl">Combined Experience</span></div></div>
+              <div class="anc-stat"><div class="anc-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/></svg></div><div class="anc-stat-body"><span class="anc-stat-val">150+ Projects</span><span class="anc-stat-lbl">Delivered On Time</span></div></div>
+              <div class="anc-stat"><div class="anc-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="anc-stat-body"><span class="anc-stat-val">98% Retention</span><span class="anc-stat-lbl">Client Satisfaction Rate</span></div></div>
+            </div>
+            <!-- Team member rows -->
+            <div class="anc-members">
+              <div class="anc-member">
+                <div class="anc-av" style="background:linear-gradient(135deg,#1B5BFF,#5b8dff)">SN</div>
+                <div class="anc-mem-info"><strong>Samsun Nahar</strong><span>CEO &amp; Digital Strategist</span></div>
+                <div class="anc-online"><span class="anc-dot"></span>Available</div>
+              </div>
+              <div class="anc-member">
+                <div class="anc-av" style="background:linear-gradient(135deg,#7c3aed,#a855f7)">SM</div>
+                <div class="anc-mem-info"><strong>MD Sumon Mia</strong><span>Lead Developer</span></div>
+                <div class="anc-online"><span class="anc-dot"></span>Available</div>
+              </div>
+            </div>
+            <!-- Bottom trust bar -->
+            <div class="anc-footer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" width="14" height="14"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01" stroke="#34d399" fill="none" stroke-width="2.5"/></svg>
+              <span>US-Based · In-House Team · No Outsourcing</span>
+            </div>
+            <div class="ap-badge"><span class="ap-b-n">5+</span><span class="ap-b-l">Years of Excellence</span></div>
+          </div>
+        </div>
+        <div class="ap-copy reveal">
+          <span class="tag-pill">About Qweb Marketing</span>
+          <h2>Not Just an Agency.<br><span class="grad">Your Growth Partner.</span></h2>
+          <p>Founded in Buffalo, NY, Qweb Marketing has spent 5+ years helping businesses across the US build digital presences that actually perform. We combine strategic thinking with premium execution.</p>
+          <p>We don't outsource, we don't cut corners, and we never miss deadlines. You work directly with our in-house team of designers, developers, and marketers.</p>
+          <ul class="ck-list">
+            <li><span>✓</span>US-Based Strategy, Global Execution</li>
+            <li><span>✓</span>Dedicated Account Manager for Every Client</li>
+            <li><span>✓</span>No Long-Term Contracts Required</li>
+            <li><span>✓</span>Transparent Reporting & Weekly Updates</li>
+          </ul>
+          <a href="#" class="btn-primary btn-md" onclick="return nav('about')">Learn More About Us →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section proc-sec">
+    <div class="container">
+      <div class="sec-hdr reveal"><span class="tag-pill">How We Work</span><h2>Our <span class="grad">4-Step Process</span></h2><p>A streamlined workflow that gets results, fast.</p></div>
+      <div class="proc-row">
+        <div class="proc-nd reveal"><div class="pn">01</div><h3>Discovery Call</h3><p>We learn your goals, audience, and competition in a focused 30-minute strategy session.</p></div>
+        <div class="proc-arr">→</div>
+        <div class="proc-nd reveal"><div class="pn">02</div><h3>Strategy & Plan</h3><p>A custom roadmap tailored to your business objectives and budget.</p></div>
+        <div class="proc-arr">→</div>
+        <div class="proc-nd reveal"><div class="pn">03</div><h3>Design & Build</h3><p>Precise execution with weekly updates and full transparency throughout.</p></div>
+        <div class="proc-arr">→</div>
+        <div class="proc-nd reveal"><div class="pn">04</div><h3>Launch & Scale</h3><p>Go live and optimize continuously — growth doesn't stop at launch.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENT LOGOS -->
+  <section class="section logos-sec">
+    <div class="container">
+      <div class="sec-hdr reveal"><span class="tag-pill">Trusted By</span><h2>Brands That <span class="grad">Trust Us</span></h2></div>
+      <div class="logos-scroll-wrap">
+        <div class="logos-track">
+          <!-- Brand 1: TechCorp -->
+          <div class="brand-logo">
+            <svg viewBox="0 0 80 30" width="80" height="30"><rect x="0" y="8" width="14" height="14" rx="3" fill="#1B5BFF"/><text x="19" y="20" font-family="Arial Black" font-weight="900" font-size="12" fill="#eeeef5">TechCorp</text></svg>
+          </div>
+          <!-- Brand 2: StyleHub -->
+          <div class="brand-logo">
+            <svg viewBox="0 0 80 30" width="80" height="30"><circle cx="8" cy="15" r="7" fill="none" stroke="#a855f7" stroke-width="2.5"/><text x="20" y="20" font-family="Arial Black" font-weight="900" font-size="12" fill="#eeeef5">StyleHub</text></svg>
+          </div>
+          <!-- Brand 3: GreenLeaf -->
+          <div class="brand-logo">
+            <svg viewBox="0 0 90 30" width="90" height="30"><path d="M3 22 C3 22 3 8 16 8 C16 8 16 22 3 22Z" fill="#22c55e"/><text x="21" y="20" font-family="Arial Black" font-weight="900" font-size="12" fill="#eeeef5">GreenLeaf</text></svg>
+          </div>
+          <!-- Brand 4: NovaBrand -->
+          <div class="brand-logo">
+            <svg viewBox="0 0 90 30" width="90" height="30"><polygon points="8,4 10,11 17,11 11.5,15.5 13.5,22.5 8,18 2.5,22.5 4.5,15.5 -1,11 6,11" fill="#f59e0b"/><text x="22" y="20" font-family="Arial Black" font-weight="900" font-size="12" fill="#eeeef5">NovaBrand</text></svg>
+          </div>
+          <!-- Brand 5: UrbanEdge -->
+          <div class="brand-logo">
+            <svg viewBox="0 0 95 30" width="95" height="30"><path d="M4 6 L4 18 Q4 24 10 24 Q16 24 16 18 L16 6" fill="none" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round"/><text x="22" y="20" font-family="Arial Black" font-weight="900" font-size="12" fill="#eeeef5">UrbanEdge</text></svg>
+          </div>
+          <!-- Brand 6: PeakFlow -->
+          <div class="brand-logo">
+            <svg viewBox="0 0 85 30" width="85" height="30"><polyline points="2,22 8,10 14,16 20,4" fill="none" stroke="#1B5BFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="26" y="20" font-family="Arial Black" font-weight="900" font-size="12" fill="#eeeef5">PeakFlow</text></svg>
+          </div>
+          <!-- Brand 7: LuxeWorks -->
+          <div class="brand-logo">
+            <svg viewBox="0 0 90 30" width="90" height="30"><rect x="2" y="6" width="16" height="18" rx="2" fill="none" stroke="#d97706" stroke-width="2"/><line x1="6" y1="12" x2="14" y2="12" stroke="#d97706" stroke-width="1.5"/><line x1="6" y1="16" x2="14" y2="16" stroke="#d97706" stroke-width="1.5"/><text x="23" y="20" font-family="Arial Black" font-weight="900" font-size="12" fill="#eeeef5">LuxeWorks</text></svg>
+          </div>
+          <!-- Duplicate set -->
+          <div class="brand-logo">
+            <svg viewBox="0 0 80 30" width="80" height="30"><rect x="0" y="8" width="14" height="14" rx="3" fill="#1B5BFF"/><text x="19" y="20" font-family="Arial Black" font-weight="900" font-size="12" fill="#eeeef5">TechCorp</text></svg>
+          </div>
+          <div class="brand-logo">
+            <svg viewBox="0 0 80 30" width="80" height="30"><circle cx="8" cy="15" r="7" fill="none" stroke="#a855f7" stroke-width="2.5"/><text x="20" y="20" font-family="Arial Black" font-weight="900" font-size="12" fill="#eeeef5">StyleHub</text></svg>
+          </div>
+          <div class="brand-logo">
+            <svg viewBox="0 0 90 30" width="90" height="30"><path d="M3 22 C3 22 3 8 16 8 C16 8 16 22 3 22Z" fill="#22c55e"/><text x="21" y="20" font-family="Arial Black" font-weight="900" font-size="12" fill="#eeeef5">GreenLeaf</text></svg>
+          </div>
+          <div class="brand-logo">
+            <svg viewBox="0 0 90 30" width="90" height="30"><polygon points="8,4 10,11 17,11 11.5,15.5 13.5,22.5 8,18 2.5,22.5 4.5,15.5 -1,11 6,11" fill="#f59e0b"/><text x="22" y="20" font-family="Arial Black" font-weight="900" font-size="12" fill="#eeeef5">NovaBrand</text></svg>
+          </div>
+          <div class="brand-logo">
+            <svg viewBox="0 0 95 30" width="95" height="30"><path d="M4 6 L4 18 Q4 24 10 24 Q16 24 16 18 L16 6" fill="none" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round"/><text x="22" y="20" font-family="Arial Black" font-weight="900" font-size="12" fill="#eeeef5">UrbanEdge</text></svg>
+          </div>
+          <div class="brand-logo">
+            <svg viewBox="0 0 85 30" width="85" height="30"><polyline points="2,22 8,10 14,16 20,4" fill="none" stroke="#1B5BFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="26" y="20" font-family="Arial Black" font-weight="900" font-size="12" fill="#eeeef5">PeakFlow</text></svg>
+          </div>
+          <div class="brand-logo">
+            <svg viewBox="0 0 90 30" width="90" height="30"><rect x="2" y="6" width="16" height="18" rx="2" fill="none" stroke="#d97706" stroke-width="2"/><line x1="6" y1="12" x2="14" y2="12" stroke="#d97706" stroke-width="1.5"/><line x1="6" y1="16" x2="14" y2="16" stroke="#d97706" stroke-width="1.5"/><text x="23" y="20" font-family="Arial Black" font-weight="900" font-size="12" fill="#eeeef5">LuxeWorks</text></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS 3-CARD SLIDER -->
+  <section class="section testi-sec">
+    <div class="container">
+      <div class="sec-hdr reveal">
+        <span class="tag-pill">Client Stories</span>
+        <h2>Real Words From <span class="grad">Real Clients</span></h2>
+        <p>Don't take our word for it — hear from businesses we've helped grow.</p>
+      </div>
+      <div class="ts-outer reveal">
+        <div class="ts-track" id="tsTrack">
+          <!-- GROUP 1 (3 cards) -->
+          <div class="ts-group">
+            <div class="tc"><div class="tc-stars">★★★★★</div><p>"Qweb transformed our outdated site into a conversion machine. We saw a 3× increase in leads within the first month. Their team is professional, fast, and genuinely invested in our success."</p><div class="tc-auth"><div class="tc-av" style="background:linear-gradient(135deg,#1B5BFF,#60a5fa)">JM</div><div><strong>James Morrison</strong><span>CEO, Morrison Legal Group · New York</span></div></div></div>
+            <div class="tc featured-tc"><div class="tc-stars">★★★★★</div><p>"The Shopify store they built for us is stunning. Our conversion rate went from 1.4% to 4.2% after the redesign. Qweb doesn't just design pretty sites — they build revenue machines."</p><div class="tc-auth"><div class="tc-av" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)">DK</div><div><strong>Daniel Kim</strong><span>Co-Founder, ThreadLine Co. · Los Angeles</span></div></div></div>
+            <div class="tc"><div class="tc-stars">★★★★★</div><p>"I've worked with 3 agencies before Qweb. None came close. Their SEO work pushed us to page 1 for our top keywords in under 4 months. Absolutely worth every penny."</p><div class="tc-auth"><div class="tc-av" style="background:linear-gradient(135deg,#059669,#34d399)">SR</div><div><strong>Sophia Ramirez</strong><span>Founder, GlowSkin Boutique · Miami</span></div></div></div>
+          </div>
+          <!-- GROUP 2 (3 cards) -->
+          <div class="ts-group">
+            <div class="tc"><div class="tc-stars">★★★★★</div><p>"Within 6 weeks of Qweb managing our social media, our Instagram grew by 12K followers organically. The content is premium, on-brand, and performs exactly as promised."</p><div class="tc-auth"><div class="tc-av" style="background:linear-gradient(135deg,#d97706,#fbbf24)">AN</div><div><strong>Aisha Nwosu</strong><span>Marketing Director, Luxe Interiors · Chicago</span></div></div></div>
+            <div class="tc featured-tc"><div class="tc-stars">★★★★★</div><p>"Qweb's email marketing sequences generated $42K in revenue from our existing list in the first 30 days. The ROI is insane. Their copywriting and automation is world-class."</p><div class="tc-auth"><div class="tc-av" style="background:linear-gradient(135deg,#0891b2,#22d3ee)">TW</div><div><strong>Tyler Walsh</strong><span>Owner, FitCore Supplements · Austin</span></div></div></div>
+            <div class="tc"><div class="tc-stars">★★★★★</div><p>"Five stars isn't enough. The Webflow site they delivered was beyond what we imagined. They understood our vision immediately and executed it flawlessly. Incredible team."</p><div class="tc-auth"><div class="tc-av" style="background:linear-gradient(135deg,#be185d,#f472b6)">LP</div><div><strong>Laura Pemberton</strong><span>Creative Director, Studio LP · Seattle</span></div></div></div>
+          </div>
+        </div>
+        <div class="ts-ctrl">
+          <button class="ts-btn" id="tsPrev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15,18 9,12 15,6"/></svg></button>
+          <div class="ts-dots" id="tsDots"></div>
+          <button class="ts-btn" id="tsNext" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq-sec">
+    <div class="container faq-box">
+      <div class="sec-hdr reveal"><span class="tag-pill">FAQ</span><h2>Questions We <span class="grad">Get Asked a Lot</span></h2></div>
+      <div class="faq-list">
+        <div class="fq reveal"><button class="fq-btn">How long does a typical project take?<span class="fq-ic">+</span></button><div class="fq-ans"><p>Project timelines vary by scope. A standard website takes 2–4 weeks. Complex eCommerce or full marketing campaigns may take 6–10 weeks. We give you an accurate timeline on your free strategy call.</p></div></div>
+        <div class="fq reveal"><button class="fq-btn">Do you work with businesses outside Buffalo?<span class="fq-ic">+</span></button><div class="fq-ans"><p>Absolutely. While headquartered in Buffalo, NY, we work with clients across the US and internationally. Our remote workflow is tight and communication is always clear and proactive.</p></div></div>
+        <div class="fq reveal"><button class="fq-btn">What platforms do you specialize in?<span class="fq-ic">+</span></button><div class="fq-ans"><p>WordPress, Webflow, Shopify, Wix, and Framer — plus custom development when needed. We'll always recommend the best platform for your specific goals and budget.</p></div></div>
+        <div class="fq reveal"><button class="fq-btn">How much does it cost?<span class="fq-ic">+</span></button><div class="fq-ans"><p>Our pricing depends on scope and complexity. Transparent, flat-rate pricing with no hidden fees. Most web projects start at $1,500. Book a free strategy call for a custom quote.</p></div></div>
+        <div class="fq reveal"><button class="fq-btn">Will I own my website after it's built?<span class="fq-ic">+</span></button><div class="fq-ans"><p>Yes — 100%. You own your website, all assets, and all code. We don't hold sites hostage or charge unnecessary maintenance fees unless you opt for an ongoing retainer.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-sec">
+    <div class="container">
+      <div class="cta-card reveal">
+        <div class="cta-orb"></div>
+        <span class="tag-pill">Ready to Grow?</span>
+        <h2>Let's Build Something<br><span class="grad">Extraordinary Together.</span></h2>
+        <p>Book a free 30-minute strategy call. No pitch, no pressure — just real insights for your business.</p>
+        <div class="cta-btns">
+          <a href="#" class="btn-primary btn-md" onclick="return nav('consultancy')">Book Your Free Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="#" class="btn-ghost btn-md" onclick="return nav('contact')">Send Us a Message</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /pg-home -->
+
+<!-- ══════════ ABOUT ══════════ -->
+<div id="pg-about" class="pg">
+  <section class="pg-hero"><div class="hero-glow g1"></div><div class="hero-glow g2"></div><div class="container"><div class="pgh-inner reveal"><span class="tag-pill">About Us</span><h1>We're Qweb Marketing.<br><span class="grad">We Make Brands Matter.</span></h1><p>Buffalo-born. Results-driven. Premium by design.</p></div></div></section>
+  <section class="section"><div class="container"><div class="ap-grid"><div class="ap-copy reveal"><span class="tag-pill">Our Story</span><h2>Started With a Mission.<br><span class="grad">Grown Into a Movement.</span></h2><p>Qweb Marketing was founded with one belief: ambitious businesses deserve enterprise-level digital execution. We started in Buffalo, NY over 5 years ago and have helped 40+ clients across the US build digital presences that actually perform.</p><p>We're not a churn-and-burn agency. We build real partnerships guided by data, creativity, and an obsessive commitment to results.</p></div><div class="ap-visual reveal"><div class="ap-noimg-card office-visual-card">
+  <div class="anc-glow"></div>
+  <div class="anc-topbar">
+    <div class="anc-dots"><span class="rd"></span><span class="yl"></span><span class="gn"></span></div>
+    <span class="anc-topbar-title">Qweb Marketing · Global Operations</span>
+  </div>
+  <!-- Location badge -->
+  <div class="ovc-location">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    <span>Headquartered in <strong>Buffalo, NY, USA</strong></span>
+  </div>
+  <!-- World map SVG (simplified dots) -->
+  <div class="ovc-map">
+    <svg viewBox="0 0 400 200" width="100%" height="auto" style="opacity:.9">
+      <!-- Simplified world map path -->
+      <path d="M20,60 Q40,50 60,55 Q80,45 100,50 Q120,40 140,45 Q160,35 180,40 Q200,30 220,38 Q240,32 260,40 Q280,35 300,42 Q320,38 340,45 Q360,42 380,50" fill="none" stroke="rgba(27,91,255,.15)" stroke-width="1"/>
+      <!-- Continent outlines simplified -->
+      <!-- North America -->
+      <path d="M60,45 Q75,38 90,42 Q100,48 95,62 Q85,72 75,68 Q62,60 60,45z" fill="rgba(27,91,255,.12)" stroke="rgba(27,91,255,.3)" stroke-width=".8"/>
+      <!-- South America -->
+      <path d="M90,90 Q102,85 108,95 Q112,110 104,125 Q95,130 88,120 Q82,105 90,90z" fill="rgba(27,91,255,.1)" stroke="rgba(27,91,255,.25)" stroke-width=".8"/>
+      <!-- Europe -->
+      <path d="M165,40 Q175,34 185,38 Q190,46 182,52 Q170,52 165,40z" fill="rgba(27,91,255,.12)" stroke="rgba(27,91,255,.3)" stroke-width=".8"/>
+      <!-- Africa -->
+      <path d="M170,58 Q182,55 188,65 Q192,80 185,100 Q175,108 165,98 Q158,82 162,65 Q164,58 170,58z" fill="rgba(27,91,255,.1)" stroke="rgba(27,91,255,.25)" stroke-width=".8"/>
+      <!-- Asia -->
+      <path d="M200,30 Q230,25 260,32 Q280,38 285,52 Q275,65 250,62 Q225,65 205,55 Q195,45 200,30z" fill="rgba(27,91,255,.12)" stroke="rgba(27,91,255,.3)" stroke-width=".8"/>
+      <!-- Australia -->
+      <path d="M295,105 Q315,100 325,112 Q322,128 305,130 Q290,125 295,105z" fill="rgba(27,91,255,.1)" stroke="rgba(27,91,255,.25)" stroke-width=".8"/>
+      <!-- Client location dots -->
+      <circle cx="78" cy="54" r="4" fill="#1B5BFF" opacity=".9">
+        <animate attributeName="r" values="4;7;4" dur="2.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".9;.3;.9" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="78" cy="54" r="2" fill="#5b8dff"/>
+      <circle cx="172" cy="44" r="3.5" fill="#1B5BFF" opacity=".85">
+        <animate attributeName="r" values="3.5;6;3.5" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".85;.3;.85" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="172" cy="44" r="1.8" fill="#5b8dff"/>
+      <circle cx="248" cy="46" r="3.5" fill="#1B5BFF" opacity=".8">
+        <animate attributeName="r" values="3.5;6;3.5" dur="2.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".8;.3;.8" dur="2.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="248" cy="46" r="1.8" fill="#5b8dff"/>
+      <circle cx="308" cy="113" r="3" fill="#1B5BFF" opacity=".75">
+        <animate attributeName="r" values="3;5.5;3" dur="3.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".75;.3;.75" dur="3.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="308" cy="113" r="1.5" fill="#5b8dff"/>
+      <circle cx="97" cy="100" r="3" fill="#1B5BFF" opacity=".7">
+        <animate attributeName="r" values="3;5.5;3" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="97" cy="100" r="1.5" fill="#5b8dff"/>
+      <!-- Connection lines -->
+      <line x1="78" y1="54" x2="172" y2="44" stroke="rgba(27,91,255,.18)" stroke-width=".8" stroke-dasharray="4,3"/>
+      <line x1="172" y1="44" x2="248" y2="46" stroke="rgba(27,91,255,.18)" stroke-width=".8" stroke-dasharray="4,3"/>
+      <line x1="78" y1="54" x2="97" y2="100" stroke="rgba(27,91,255,.14)" stroke-width=".8" stroke-dasharray="4,3"/>
+      <line x1="248" y1="46" x2="308" y2="113" stroke="rgba(27,91,255,.14)" stroke-width=".8" stroke-dasharray="4,3"/>
+    </svg>
+  </div>
+  <!-- Stats row -->
+  <div class="ovc-stats">
+    <div class="ovc-stat"><span class="ovc-n">40+</span><span class="ovc-l">US Clients</span></div>
+    <div class="ovc-div"></div>
+    <div class="ovc-stat"><span class="ovc-n">5</span><span class="ovc-l">Countries Served</span></div>
+    <div class="ovc-div"></div>
+    <div class="ovc-stat"><span class="ovc-n">100%</span><span class="ovc-l">Remote-Ready</span></div>
+  </div>
+  <div class="anc-footer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" width="14" height="14"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01" stroke="#34d399" fill="none" stroke-width="2.5"/></svg>
+    <span>Fully Remote · Serving Clients Worldwide Since 2019</span>
+  </div>
+</div></div></div></div></section>
+  <section class="section" style="background:var(--bg2)"><div class="container"><div class="sec-hdr reveal"><span class="tag-pill">Our Team</span><h2>The People Behind <span class="grad">Your Growth</span></h2></div><div class="team-grid"><div class="team-card reveal"><div class="team-ph"><img src="/images/team/ceo.jpg" alt="Samsun Nahar" onerror="this.style.display='none'"><div class="team-av">SN</div></div><h3>Samsun Nahar</h3><span class="team-role">Chief Executive Officer</span><p>With 5+ years leading digital strategy, Samsun founded Qweb Marketing with a vision to bring enterprise-level digital execution to ambitious businesses.</p></div><div class="team-card reveal"><div class="team-ph"><img src="/images/team/developer.jpg" alt="MD Sumon Mia" onerror="this.style.display='none'"><div class="team-av">SM</div></div><h3>MD Sumon Mia</h3><span class="team-role">Lead Developer</span><p>The technical backbone of Qweb Marketing. Specializing in WordPress, Shopify, Webflow, and custom development with precision and performance on every project.</p></div></div></div></section>
+  <section class="section cta-sec"><div class="container"><div class="cta-card reveal"><div class="cta-orb"></div><h2>Work With a Team That<br><span class="grad">Actually Cares.</span></h2><p>Book your free strategy call today.</p><a href="#" class="btn-primary btn-md" onclick="return nav('consultancy')">Get My Free Strategy Call →</a></div></div></section>
+</div>
+
+<!-- ══════════ SERVICES OVERVIEW ══════════ -->
+<div id="pg-services" class="pg">
+  <section class="pg-hero"><div class="hero-glow g1"></div><div class="hero-glow g2"></div><div class="container"><div class="pgh-inner reveal"><span class="tag-pill">Our Services</span><h1>End-to-End Digital Solutions<br><span class="grad">For Ambitious Brands</span></h1><p>From web development to performance marketing — done right, every time.</p></div></div></section>
+  <section class="section"><div class="container"><div class="svc-grid"><div class="svc-card reveal" onclick="return nav('service-wordpress')"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></div><h3>WordPress Design</h3><p>Custom sites built for performance, SEO, and easy management.</p><span class="svc-cta">Request Service →</span></div><div class="svc-card reveal" onclick="return nav('service-wix')"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div><h3>Wix Development</h3><p>Beautiful Wix sites with powerful features and smooth animations.</p><span class="svc-cta">Request Service →</span></div><div class="svc-card reveal" onclick="return nav('service-webflow')"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16,18 22,12 16,6"/><polyline points="8,6 2,12 8,18"/></svg></div><h3>Webflow Development</h3><p>Stunning, SEO-optimized Webflow sites that scale with your business.</p><span class="svc-cta">Request Service →</span></div><div class="svc-card reveal" onclick="return nav('service-shopify')"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div><h3>Shopify Development</h3><p>High-converting stores optimized for maximum revenue and UX.</p><span class="svc-cta">Request Service →</span></div><div class="svc-card reveal" onclick="return nav('service-framer')"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 5h14v6H5z"/><path d="M5 11h7v7l-7-7z"/></svg></div><h3>Framer Development</h3><p>Cutting-edge Framer sites with jaw-dropping motion and interactions.</p><span class="svc-cta">Request Service →</span></div><div class="svc-card reveal" onclick="return nav('service-smm')"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div><h3>Social Media Marketing</h3><p>Data-driven strategies that build audiences and generate leads.</p><span class="svc-cta">Request Service →</span></div><div class="svc-card reveal" onclick="return nav('service-seo')"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div><h3>SEO Services</h3><p>Dominate Google rankings with technical SEO and content strategy.</p><span class="svc-cta">Request Service →</span></div><div class="svc-card reveal" onclick="return nav('service-graphics')"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3>Graphics Design</h3><p>Brand identities and creative assets that stop the scroll.</p><span class="svc-cta">Request Service →</span></div><div class="svc-card reveal" onclick="return nav('service-email')"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><h3>Email Marketing</h3><p>Automated sequences that nurture leads and drive repeat revenue.</p><span class="svc-cta">Request Service →</span></div><div class="svc-card reveal" onclick="return nav('service-video')"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23,7 16,12 23,17"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div><h3>Video Editing</h3><p>Professional video production for ads, reels, and brand storytelling.</p><span class="svc-cta">Request Service →</span></div></div></div></section>
+</div>
+
+<!-- ══════════ SERVICE DYNAMIC ══════════ -->
+<div id="svc-container" class="pg"></div>
+
+<!-- ══════════ PORTFOLIO ══════════ -->
+<div id="pg-portfolio" class="pg">
+  <section class="pg-hero"><div class="hero-glow g1"></div><div class="hero-glow g2"></div><div class="container"><div class="pgh-inner reveal"><span class="tag-pill">Our Work</span><h1>Projects That <span class="grad">Speak for Themselves</span></h1><p>A curated selection of our finest digital work across industries and platforms.</p></div></div></section>
+  <section class="section"><div class="container">
+    <div class="port-filters reveal">
+      <button class="pf-btn active" data-f="all">All Work</button>
+      <button class="pf-btn" data-f="wordpress">WordPress</button>
+      <button class="pf-btn" data-f="shopify">Shopify</button>
+      <button class="pf-btn" data-f="webflow">Webflow</button>
+      <button class="pf-btn" data-f="wix">Wix</button>
+      <button class="pf-btn" data-f="framer">Framer</button>
+      <button class="pf-btn" data-f="smm">Social Media</button>
+      <button class="pf-btn" data-f="seo">SEO</button>
+      <button class="pf-btn" data-f="graphics">Graphics</button>
+    </div>
+    <div class="port-grid" id="portGrid">
+      <div class="pc reveal" data-cat="wordpress" data-title="Morrison Legal Group" data-tag="WordPress Design" data-desc="Full WordPress redesign for a Buffalo-based law firm. 312% increase in organic traffic and tripled contact form submissions within 60 days. Custom theme, on-page SEO, and CRM integration." data-result="312% Traffic Growth" style="--grad:linear-gradient(135deg,#1B5BFF22,#0a0a2e)"><div class="pc-img"><span>Morrison Legal Group</span><div class="pc-ov"><span>View Project</span></div></div><div class="pc-meta"><span class="pc-tag">WordPress Design</span><h4>Morrison Legal Group</h4></div></div>
+      <div class="pc reveal" data-cat="wordpress" data-title="NovaBrand Agency" data-tag="WordPress Design" data-desc="Complete WordPress website for a branding agency. Advanced animations and a portfolio-forward layout that increased client inquiries by 200%. WooCommerce and booking integration." data-result="200% More Inquiries" style="--grad:linear-gradient(135deg,#7c3aed22,#0a002a)"><div class="pc-img"><span>NovaBrand Agency</span><div class="pc-ov"><span>View Project</span></div></div><div class="pc-meta"><span class="pc-tag">WordPress Design</span><h4>NovaBrand Agency</h4></div></div>
+      <div class="pc reveal" data-cat="shopify" data-title="ThreadLine Co." data-tag="Shopify Development" data-desc="Custom Shopify store for an apparel brand. Advanced filtering, upsell flows, and cart recovery. CVR lifted from 1.4% to 4.2% within 90 days of launch." data-result="CVR: 1.4% → 4.2%" style="--grad:linear-gradient(135deg,#22c55e22,#001a0a)"><div class="pc-img"><span>ThreadLine Co.</span><div class="pc-ov"><span>View Project</span></div></div><div class="pc-meta"><span class="pc-tag">Shopify Development</span><h4>ThreadLine Co.</h4></div></div>
+      <div class="pc reveal" data-cat="shopify" data-title="PeakFlow Nutrition" data-tag="Shopify Development" data-desc="Subscription-based Shopify store for a supplements brand. Custom bundle builder and 90-day optimization sprint that doubled monthly recurring revenue." data-result="Revenue Doubled" style="--grad:linear-gradient(135deg,#f59e0b22,#1a0a00)"><div class="pc-img"><span>PeakFlow Nutrition</span><div class="pc-ov"><span>View Project</span></div></div><div class="pc-meta"><span class="pc-tag">Shopify Development</span><h4>PeakFlow Nutrition</h4></div></div>
+      <div class="pc reveal" data-cat="webflow" data-title="Studio LP Creative" data-tag="Webflow Development" data-desc="Awwwards Honorable Mention Webflow site for a creative studio. Full-page scroll interactions, custom cursor, and scroll-triggered animations. 180% increase in project inquiries." data-result="Awwwards HM" style="--grad:linear-gradient(135deg,#4353FF33,#00001a)"><div class="pc-img"><span>Studio LP Creative</span><div class="pc-ov"><span>View Project</span></div></div><div class="pc-meta"><span class="pc-tag">Webflow Development</span><h4>Studio LP Creative</h4></div></div>
+      <div class="pc reveal" data-cat="webflow" data-title="TechCorp SaaS" data-tag="Webflow Development" data-desc="Enterprise Webflow site for a B2B SaaS company. CMS blog, pricing page A/B testing, and HubSpot CRM integration that increased demo bookings by 160%." data-result="160% More Demos" style="--grad:linear-gradient(135deg,#1B5BFF33,#000a1a)"><div class="pc-img"><span>TechCorp SaaS</span><div class="pc-ov"><span>View Project</span></div></div><div class="pc-meta"><span class="pc-tag">Webflow Development</span><h4>TechCorp SaaS</h4></div></div>
+      <div class="pc reveal" data-cat="smm" data-title="GlowSkin Boutique" data-tag="Social Media Marketing" data-desc="Full social media management for a skincare brand. Grew Instagram from 800 to 12K followers in 6 weeks with a 7.4% average engagement rate." data-result="800 → 12K Followers" style="--grad:linear-gradient(135deg,#ec489933,#1a000a)"><div class="pc-img"><span>GlowSkin Boutique</span><div class="pc-ov"><span>View Project</span></div></div><div class="pc-meta"><span class="pc-tag">Social Media Marketing</span><h4>GlowSkin Boutique</h4></div></div>
+      <div class="pc reveal" data-cat="seo" data-title="FitCore Supplements" data-tag="SEO Services" data-desc="6-month SEO campaign for a supplements brand. Ranked for 47 high-intent keywords on page 1. Organic traffic up 520%, contributing to $220K in annual revenue." data-result="520% Traffic Growth" style="--grad:linear-gradient(135deg,#10b98133,#001a0a)"><div class="pc-img"><span>FitCore Supplements</span><div class="pc-ov"><span>View Project</span></div></div><div class="pc-meta"><span class="pc-tag">SEO Services</span><h4>FitCore Supplements</h4></div></div>
+      <div class="pc reveal" data-cat="graphics" data-title="ThreadLine Brand Identity" data-tag="Graphics Design" data-desc="Complete brand identity system including logo, typography, color palette, packaging, and brand guidelines. Launched to press coverage in 3 publications." data-result="Full Brand System" style="--grad:linear-gradient(135deg,#f59e0b33,#1a0a00)"><div class="pc-img"><span>ThreadLine Brand Identity</span><div class="pc-ov"><span>View Project</span></div></div><div class="pc-meta"><span class="pc-tag">Graphics Design</span><h4>ThreadLine Brand Identity</h4></div></div>
+    </div>
+  </div></section>
+</div>
+
+<!-- PORTFOLIO MODAL -->
+<div id="portModal" class="modal-bg" onclick="closePortModal()">
+  <div class="modal-bx" onclick="event.stopPropagation()">
+    <button class="modal-x" onclick="closePortModal()">✕</button>
+    <div class="modal-vis" id="modalVis"></div>
+    <div class="modal-bd">
+      <span class="modal-tag" id="modalTag"></span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <div class="modal-res" id="modalRes"></div>
+      <a href="#" class="btn-primary btn-md" onclick="closePortModal();return nav('consultancy')">Start a Similar Project →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ CONTACT ══════════ -->
+<div id="pg-contact" class="pg">
+  <section class="pg-hero"><div class="hero-glow g1"></div><div class="hero-glow g2"></div><div class="container"><div class="pgh-inner reveal"><span class="tag-pill">Contact Us</span><h1>Let's Start a<br><span class="grad">Conversation.</span></h1><p>Tell us about your project. We respond within 24 hours.</p></div></div></section>
+  <section class="section"><div class="container"><div class="contact-layout">
+    <div class="contact-info reveal">
+      <h3>Get In Touch</h3>
+      <div class="ci-row"><div class="ci-ic">📍</div><div><strong>Address</strong><p>79 Theodore St., Buffalo, NY</p></div></div>
+      <div class="ci-row"><div class="ci-ic">📱</div><div><strong>WhatsApp / Phone</strong><p><a href="https://wa.me/17165734618">+1 (716) 573-4618</a></p></div></div>
+      <div class="ci-row"><div class="ci-ic">✉️</div><div><strong>Email</strong><p><a href="mailto:qweb.marketings@gmail.com">qweb.marketings@gmail.com</a></p></div></div>
+      <div class="ci-row"><div class="ci-ic">🕐</div><div><strong>Business Hours</strong><p>Mon–Fri: 9AM – 6PM EST</p></div></div>
+      <div class="ci-links"><a href="https://www.linkedin.com/company/qweb-marketing/" target="_blank">LinkedIn</a><a href="https://www.facebook.com/profile.php?id=61580533795315" target="_blank">Facebook</a><a href="https://www.behance.net/qwebmarketing" target="_blank">Behance</a></div>
+    </div>
+    <div class="contact-form-wrap reveal">
+      <form class="prem-form" id="contactForm" onsubmit="sendForm(event,'contact')">
+        <div class="pf-hd"><h3>Send Us a Message</h3><p>We'll get back to you within 24 hours.</p></div>
+        <div class="pf-row"><div class="pf-g"><label>Full Name *</label><input type="text" name="name" placeholder="John Smith" required></div><div class="pf-g"><label>Email Address *</label><input type="email" name="email" placeholder="john@company.com" required></div></div>
+        <div class="pf-g"><label>Phone / WhatsApp *</label><div class="phone-field-wrap">
+  <div class="pcd" id="pcd181ce5">
+    <div class="pcd-trigger" onclick="togglePCD(this)">
+      <img class="pcd-flag-img trigger-flag" src="https://flagcdn.com/20x15/us.png" alt="US">
+      <span class="pcd-val">+1</span>
+      <svg class="pcd-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11"><polyline points="6,9 12,15 18,9"/></svg>
+    </div>
+    <div class="pcd-dropdown">
+      <div class="pcd-search-wrap"><input class="pcd-search" type="text" placeholder="Search country..." oninput="filterPCD(this)" onclick="event.stopPropagation()"></div>
+      <div class="pcd-list">
+<div class="pcd-item" data-code="+1" data-iso="us" data-name="United States"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/us.png" alt="United States" loading="lazy"><span class="pcd-item-name">United States</span><span class="pcd-code">+1</span></div>
+<div class="pcd-item" data-code="+1" data-iso="ca" data-name="Canada"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ca.png" alt="Canada" loading="lazy"><span class="pcd-item-name">Canada</span><span class="pcd-code">+1</span></div>
+<div class="pcd-item" data-code="+44" data-iso="gb" data-name="United Kingdom"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/gb.png" alt="United Kingdom" loading="lazy"><span class="pcd-item-name">United Kingdom</span><span class="pcd-code">+44</span></div>
+<div class="pcd-item" data-code="+61" data-iso="au" data-name="Australia"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/au.png" alt="Australia" loading="lazy"><span class="pcd-item-name">Australia</span><span class="pcd-code">+61</span></div>
+<div class="pcd-item" data-code="+64" data-iso="nz" data-name="New Zealand"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/nz.png" alt="New Zealand" loading="lazy"><span class="pcd-item-name">New Zealand</span><span class="pcd-code">+64</span></div>
+<div class="pcd-item" data-code="+353" data-iso="ie" data-name="Ireland"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ie.png" alt="Ireland" loading="lazy"><span class="pcd-item-name">Ireland</span><span class="pcd-code">+353</span></div>
+<div class="pcd-item" data-code="+27" data-iso="za" data-name="South Africa"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/za.png" alt="South Africa" loading="lazy"><span class="pcd-item-name">South Africa</span><span class="pcd-code">+27</span></div>
+<div class="pcd-item" data-code="+971" data-iso="ae" data-name="United Arab Emirates"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ae.png" alt="United Arab Emirates" loading="lazy"><span class="pcd-item-name">United Arab Emirates</span><span class="pcd-code">+971</span></div>
+<div class="pcd-item" data-code="+966" data-iso="sa" data-name="Saudi Arabia"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/sa.png" alt="Saudi Arabia" loading="lazy"><span class="pcd-item-name">Saudi Arabia</span><span class="pcd-code">+966</span></div>
+<div class="pcd-item" data-code="+974" data-iso="qa" data-name="Qatar"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/qa.png" alt="Qatar" loading="lazy"><span class="pcd-item-name">Qatar</span><span class="pcd-code">+974</span></div>
+<div class="pcd-item" data-code="+965" data-iso="kw" data-name="Kuwait"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/kw.png" alt="Kuwait" loading="lazy"><span class="pcd-item-name">Kuwait</span><span class="pcd-code">+965</span></div>
+<div class="pcd-item" data-code="+973" data-iso="bh" data-name="Bahrain"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/bh.png" alt="Bahrain" loading="lazy"><span class="pcd-item-name">Bahrain</span><span class="pcd-code">+973</span></div>
+<div class="pcd-item" data-code="+968" data-iso="om" data-name="Oman"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/om.png" alt="Oman" loading="lazy"><span class="pcd-item-name">Oman</span><span class="pcd-code">+968</span></div>
+<div class="pcd-item" data-code="+962" data-iso="jo" data-name="Jordan"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/jo.png" alt="Jordan" loading="lazy"><span class="pcd-item-name">Jordan</span><span class="pcd-code">+962</span></div>
+<div class="pcd-item" data-code="+961" data-iso="lb" data-name="Lebanon"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/lb.png" alt="Lebanon" loading="lazy"><span class="pcd-item-name">Lebanon</span><span class="pcd-code">+961</span></div>
+<div class="pcd-item" data-code="+972" data-iso="il" data-name="Israel"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/il.png" alt="Israel" loading="lazy"><span class="pcd-item-name">Israel</span><span class="pcd-code">+972</span></div>
+<div class="pcd-item" data-code="+90" data-iso="tr" data-name="Turkey"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/tr.png" alt="Turkey" loading="lazy"><span class="pcd-item-name">Turkey</span><span class="pcd-code">+90</span></div>
+<div class="pcd-item" data-code="+91" data-iso="in" data-name="India"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/in.png" alt="India" loading="lazy"><span class="pcd-item-name">India</span><span class="pcd-code">+91</span></div>
+<div class="pcd-item" data-code="+92" data-iso="pk" data-name="Pakistan"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/pk.png" alt="Pakistan" loading="lazy"><span class="pcd-item-name">Pakistan</span><span class="pcd-code">+92</span></div>
+<div class="pcd-item" data-code="+880" data-iso="bd" data-name="Bangladesh"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/bd.png" alt="Bangladesh" loading="lazy"><span class="pcd-item-name">Bangladesh</span><span class="pcd-code">+880</span></div>
+<div class="pcd-item" data-code="+94" data-iso="lk" data-name="Sri Lanka"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/lk.png" alt="Sri Lanka" loading="lazy"><span class="pcd-item-name">Sri Lanka</span><span class="pcd-code">+94</span></div>
+<div class="pcd-item" data-code="+977" data-iso="np" data-name="Nepal"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/np.png" alt="Nepal" loading="lazy"><span class="pcd-item-name">Nepal</span><span class="pcd-code">+977</span></div>
+<div class="pcd-item" data-code="+60" data-iso="my" data-name="Malaysia"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/my.png" alt="Malaysia" loading="lazy"><span class="pcd-item-name">Malaysia</span><span class="pcd-code">+60</span></div>
+<div class="pcd-item" data-code="+65" data-iso="sg" data-name="Singapore"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/sg.png" alt="Singapore" loading="lazy"><span class="pcd-item-name">Singapore</span><span class="pcd-code">+65</span></div>
+<div class="pcd-item" data-code="+63" data-iso="ph" data-name="Philippines"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ph.png" alt="Philippines" loading="lazy"><span class="pcd-item-name">Philippines</span><span class="pcd-code">+63</span></div>
+<div class="pcd-item" data-code="+66" data-iso="th" data-name="Thailand"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/th.png" alt="Thailand" loading="lazy"><span class="pcd-item-name">Thailand</span><span class="pcd-code">+66</span></div>
+<div class="pcd-item" data-code="+62" data-iso="id" data-name="Indonesia"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/id.png" alt="Indonesia" loading="lazy"><span class="pcd-item-name">Indonesia</span><span class="pcd-code">+62</span></div>
+<div class="pcd-item" data-code="+84" data-iso="vn" data-name="Vietnam"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/vn.png" alt="Vietnam" loading="lazy"><span class="pcd-item-name">Vietnam</span><span class="pcd-code">+84</span></div>
+<div class="pcd-item" data-code="+81" data-iso="jp" data-name="Japan"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/jp.png" alt="Japan" loading="lazy"><span class="pcd-item-name">Japan</span><span class="pcd-code">+81</span></div>
+<div class="pcd-item" data-code="+82" data-iso="kr" data-name="South Korea"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/kr.png" alt="South Korea" loading="lazy"><span class="pcd-item-name">South Korea</span><span class="pcd-code">+82</span></div>
+<div class="pcd-item" data-code="+86" data-iso="cn" data-name="China"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/cn.png" alt="China" loading="lazy"><span class="pcd-item-name">China</span><span class="pcd-code">+86</span></div>
+<div class="pcd-item" data-code="+852" data-iso="hk" data-name="Hong Kong"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/hk.png" alt="Hong Kong" loading="lazy"><span class="pcd-item-name">Hong Kong</span><span class="pcd-code">+852</span></div>
+<div class="pcd-item" data-code="+886" data-iso="tw" data-name="Taiwan"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/tw.png" alt="Taiwan" loading="lazy"><span class="pcd-item-name">Taiwan</span><span class="pcd-code">+886</span></div>
+<div class="pcd-item" data-code="+49" data-iso="de" data-name="Germany"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/de.png" alt="Germany" loading="lazy"><span class="pcd-item-name">Germany</span><span class="pcd-code">+49</span></div>
+<div class="pcd-item" data-code="+33" data-iso="fr" data-name="France"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/fr.png" alt="France" loading="lazy"><span class="pcd-item-name">France</span><span class="pcd-code">+33</span></div>
+<div class="pcd-item" data-code="+34" data-iso="es" data-name="Spain"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/es.png" alt="Spain" loading="lazy"><span class="pcd-item-name">Spain</span><span class="pcd-code">+34</span></div>
+<div class="pcd-item" data-code="+39" data-iso="it" data-name="Italy"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/it.png" alt="Italy" loading="lazy"><span class="pcd-item-name">Italy</span><span class="pcd-code">+39</span></div>
+<div class="pcd-item" data-code="+31" data-iso="nl" data-name="Netherlands"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/nl.png" alt="Netherlands" loading="lazy"><span class="pcd-item-name">Netherlands</span><span class="pcd-code">+31</span></div>
+<div class="pcd-item" data-code="+32" data-iso="be" data-name="Belgium"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/be.png" alt="Belgium" loading="lazy"><span class="pcd-item-name">Belgium</span><span class="pcd-code">+32</span></div>
+<div class="pcd-item" data-code="+41" data-iso="ch" data-name="Switzerland"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ch.png" alt="Switzerland" loading="lazy"><span class="pcd-item-name">Switzerland</span><span class="pcd-code">+41</span></div>
+<div class="pcd-item" data-code="+43" data-iso="at" data-name="Austria"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/at.png" alt="Austria" loading="lazy"><span class="pcd-item-name">Austria</span><span class="pcd-code">+43</span></div>
+<div class="pcd-item" data-code="+46" data-iso="se" data-name="Sweden"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/se.png" alt="Sweden" loading="lazy"><span class="pcd-item-name">Sweden</span><span class="pcd-code">+46</span></div>
+<div class="pcd-item" data-code="+47" data-iso="no" data-name="Norway"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/no.png" alt="Norway" loading="lazy"><span class="pcd-item-name">Norway</span><span class="pcd-code">+47</span></div>
+<div class="pcd-item" data-code="+45" data-iso="dk" data-name="Denmark"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/dk.png" alt="Denmark" loading="lazy"><span class="pcd-item-name">Denmark</span><span class="pcd-code">+45</span></div>
+<div class="pcd-item" data-code="+358" data-iso="fi" data-name="Finland"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/fi.png" alt="Finland" loading="lazy"><span class="pcd-item-name">Finland</span><span class="pcd-code">+358</span></div>
+<div class="pcd-item" data-code="+351" data-iso="pt" data-name="Portugal"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/pt.png" alt="Portugal" loading="lazy"><span class="pcd-item-name">Portugal</span><span class="pcd-code">+351</span></div>
+<div class="pcd-item" data-code="+30" data-iso="gr" data-name="Greece"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/gr.png" alt="Greece" loading="lazy"><span class="pcd-item-name">Greece</span><span class="pcd-code">+30</span></div>
+<div class="pcd-item" data-code="+48" data-iso="pl" data-name="Poland"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/pl.png" alt="Poland" loading="lazy"><span class="pcd-item-name">Poland</span><span class="pcd-code">+48</span></div>
+<div class="pcd-item" data-code="+420" data-iso="cz" data-name="Czech Republic"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/cz.png" alt="Czech Republic" loading="lazy"><span class="pcd-item-name">Czech Republic</span><span class="pcd-code">+420</span></div>
+<div class="pcd-item" data-code="+36" data-iso="hu" data-name="Hungary"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/hu.png" alt="Hungary" loading="lazy"><span class="pcd-item-name">Hungary</span><span class="pcd-code">+36</span></div>
+<div class="pcd-item" data-code="+40" data-iso="ro" data-name="Romania"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ro.png" alt="Romania" loading="lazy"><span class="pcd-item-name">Romania</span><span class="pcd-code">+40</span></div>
+<div class="pcd-item" data-code="+380" data-iso="ua" data-name="Ukraine"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ua.png" alt="Ukraine" loading="lazy"><span class="pcd-item-name">Ukraine</span><span class="pcd-code">+380</span></div>
+<div class="pcd-item" data-code="+7" data-iso="ru" data-name="Russia"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ru.png" alt="Russia" loading="lazy"><span class="pcd-item-name">Russia</span><span class="pcd-code">+7</span></div>
+<div class="pcd-item" data-code="+55" data-iso="br" data-name="Brazil"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/br.png" alt="Brazil" loading="lazy"><span class="pcd-item-name">Brazil</span><span class="pcd-code">+55</span></div>
+<div class="pcd-item" data-code="+52" data-iso="mx" data-name="Mexico"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/mx.png" alt="Mexico" loading="lazy"><span class="pcd-item-name">Mexico</span><span class="pcd-code">+52</span></div>
+<div class="pcd-item" data-code="+54" data-iso="ar" data-name="Argentina"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ar.png" alt="Argentina" loading="lazy"><span class="pcd-item-name">Argentina</span><span class="pcd-code">+54</span></div>
+<div class="pcd-item" data-code="+56" data-iso="cl" data-name="Chile"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/cl.png" alt="Chile" loading="lazy"><span class="pcd-item-name">Chile</span><span class="pcd-code">+56</span></div>
+<div class="pcd-item" data-code="+57" data-iso="co" data-name="Colombia"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/co.png" alt="Colombia" loading="lazy"><span class="pcd-item-name">Colombia</span><span class="pcd-code">+57</span></div>
+<div class="pcd-item" data-code="+51" data-iso="pe" data-name="Peru"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/pe.png" alt="Peru" loading="lazy"><span class="pcd-item-name">Peru</span><span class="pcd-code">+51</span></div>
+<div class="pcd-item" data-code="+58" data-iso="ve" data-name="Venezuela"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ve.png" alt="Venezuela" loading="lazy"><span class="pcd-item-name">Venezuela</span><span class="pcd-code">+58</span></div>
+<div class="pcd-item" data-code="+234" data-iso="ng" data-name="Nigeria"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ng.png" alt="Nigeria" loading="lazy"><span class="pcd-item-name">Nigeria</span><span class="pcd-code">+234</span></div>
+<div class="pcd-item" data-code="+254" data-iso="ke" data-name="Kenya"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ke.png" alt="Kenya" loading="lazy"><span class="pcd-item-name">Kenya</span><span class="pcd-code">+254</span></div>
+<div class="pcd-item" data-code="+233" data-iso="gh" data-name="Ghana"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/gh.png" alt="Ghana" loading="lazy"><span class="pcd-item-name">Ghana</span><span class="pcd-code">+233</span></div>
+<div class="pcd-item" data-code="+255" data-iso="tz" data-name="Tanzania"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/tz.png" alt="Tanzania" loading="lazy"><span class="pcd-item-name">Tanzania</span><span class="pcd-code">+255</span></div>
+<div class="pcd-item" data-code="+20" data-iso="eg" data-name="Egypt"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/eg.png" alt="Egypt" loading="lazy"><span class="pcd-item-name">Egypt</span><span class="pcd-code">+20</span></div>
+<div class="pcd-item" data-code="+212" data-iso="ma" data-name="Morocco"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ma.png" alt="Morocco" loading="lazy"><span class="pcd-item-name">Morocco</span><span class="pcd-code">+212</span></div>
+<div class="pcd-item" data-code="+213" data-iso="dz" data-name="Algeria"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/dz.png" alt="Algeria" loading="lazy"><span class="pcd-item-name">Algeria</span><span class="pcd-code">+213</span></div>
+<div class="pcd-item" data-code="+98" data-iso="ir" data-name="Iran"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ir.png" alt="Iran" loading="lazy"><span class="pcd-item-name">Iran</span><span class="pcd-code">+98</span></div>
+<div class="pcd-item" data-code="+93" data-iso="af" data-name="Afghanistan"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/af.png" alt="Afghanistan" loading="lazy"><span class="pcd-item-name">Afghanistan</span><span class="pcd-code">+93</span></div>
+      </div>
+    </div>
+  </div>
+  <input class="pcd-code-hidden" type="hidden" name="phone_code" value="+1">
+  <input type="tel" name="phone" placeholder="Enter phone number" required>
+</div>
+        <div class="pf-g"><label>Project Details</label><textarea name="message" rows="4" placeholder="Tell us about your project..."></textarea></div>
+        <div class="pf-g"><label>Budget Range</label><select name="budget"><option value="">Select budget range</option><option>$500 – $1,500</option><option>$1,500 – $5,000</option><option>$5,000 – $15,000</option><option>$15,000+</option></select></div>
+        <button type="submit" class="btn-primary btn-form-submit">Send Message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg></button>
+        <div class="form-st" id="contactSt"></div>
+      </form>
+    </div>
+  </div></div></section>
+</div>
+
+<!-- ══════════ CONSULTANCY ══════════ -->
+<div id="pg-consultancy" class="pg">
+  <section class="pg-hero"><div class="hero-glow g1"></div><div class="hero-glow g2"></div><div class="container"><div class="pgh-inner reveal"><span class="tag-pill">Free Strategy Call</span><h1>Book Your Free<br><span class="grad">30-Min Strategy Session</span></h1><p>No pitch. No pressure. Just actionable insights — completely free.</p></div></div></section>
+  <section class="section"><div class="container"><div class="consult-layout">
+    <div class="consult-info reveal">
+      <h3>What to Expect</h3>
+      <div class="exp-row"><span class="exp-n">01</span><div><strong>Business Audit</strong><p>We analyze your current digital presence and identify the biggest growth opportunities.</p></div></div>
+      <div class="exp-row"><span class="exp-n">02</span><div><strong>Custom Strategy</strong><p>You walk away with a clear, actionable roadmap tailored to your goals and budget.</p></div></div>
+      <div class="exp-row"><span class="exp-n">03</span><div><strong>No Obligation</strong><p>Genuinely free. No hard sell. You win either way — with more clarity about your business.</p></div></div>
+      <div class="trust-badges"><div class="t-badge">⭐ 5.0 Avg Rating</div><div class="t-badge">🔒 100% Confidential</div><div class="t-badge">⚡ Same-Day Response</div></div>
+    </div>
+    <div class="consult-form reveal">
+      <form class="prem-form" id="consultForm" onsubmit="sendForm(event,'consultancy')">
+        <div class="pf-hd"><h3>Book Your Free Call</h3><p>We'll confirm your slot within 2 hours.</p></div>
+        <div class="pf-row"><div class="pf-g"><label>Full Name *</label><input type="text" name="name" placeholder="John Smith" required></div><div class="pf-g"><label>Email Address *</label><input type="email" name="email" placeholder="john@company.com" required></div></div>
+        <div class="pf-g"><label>Phone / WhatsApp *</label><div class="phone-field-wrap">
+  <div class="pcd" id="pcd23a79b">
+    <div class="pcd-trigger" onclick="togglePCD(this)">
+      <img class="pcd-flag-img trigger-flag" src="https://flagcdn.com/20x15/us.png" alt="US">
+      <span class="pcd-val">+1</span>
+      <svg class="pcd-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11"><polyline points="6,9 12,15 18,9"/></svg>
+    </div>
+    <div class="pcd-dropdown">
+      <div class="pcd-search-wrap"><input class="pcd-search" type="text" placeholder="Search country..." oninput="filterPCD(this)" onclick="event.stopPropagation()"></div>
+      <div class="pcd-list">
+<div class="pcd-item" data-code="+1" data-iso="us" data-name="United States"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/us.png" alt="United States" loading="lazy"><span class="pcd-item-name">United States</span><span class="pcd-code">+1</span></div>
+<div class="pcd-item" data-code="+1" data-iso="ca" data-name="Canada"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ca.png" alt="Canada" loading="lazy"><span class="pcd-item-name">Canada</span><span class="pcd-code">+1</span></div>
+<div class="pcd-item" data-code="+44" data-iso="gb" data-name="United Kingdom"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/gb.png" alt="United Kingdom" loading="lazy"><span class="pcd-item-name">United Kingdom</span><span class="pcd-code">+44</span></div>
+<div class="pcd-item" data-code="+61" data-iso="au" data-name="Australia"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/au.png" alt="Australia" loading="lazy"><span class="pcd-item-name">Australia</span><span class="pcd-code">+61</span></div>
+<div class="pcd-item" data-code="+64" data-iso="nz" data-name="New Zealand"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/nz.png" alt="New Zealand" loading="lazy"><span class="pcd-item-name">New Zealand</span><span class="pcd-code">+64</span></div>
+<div class="pcd-item" data-code="+353" data-iso="ie" data-name="Ireland"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ie.png" alt="Ireland" loading="lazy"><span class="pcd-item-name">Ireland</span><span class="pcd-code">+353</span></div>
+<div class="pcd-item" data-code="+27" data-iso="za" data-name="South Africa"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/za.png" alt="South Africa" loading="lazy"><span class="pcd-item-name">South Africa</span><span class="pcd-code">+27</span></div>
+<div class="pcd-item" data-code="+971" data-iso="ae" data-name="United Arab Emirates"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ae.png" alt="United Arab Emirates" loading="lazy"><span class="pcd-item-name">United Arab Emirates</span><span class="pcd-code">+971</span></div>
+<div class="pcd-item" data-code="+966" data-iso="sa" data-name="Saudi Arabia"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/sa.png" alt="Saudi Arabia" loading="lazy"><span class="pcd-item-name">Saudi Arabia</span><span class="pcd-code">+966</span></div>
+<div class="pcd-item" data-code="+974" data-iso="qa" data-name="Qatar"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/qa.png" alt="Qatar" loading="lazy"><span class="pcd-item-name">Qatar</span><span class="pcd-code">+974</span></div>
+<div class="pcd-item" data-code="+965" data-iso="kw" data-name="Kuwait"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/kw.png" alt="Kuwait" loading="lazy"><span class="pcd-item-name">Kuwait</span><span class="pcd-code">+965</span></div>
+<div class="pcd-item" data-code="+973" data-iso="bh" data-name="Bahrain"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/bh.png" alt="Bahrain" loading="lazy"><span class="pcd-item-name">Bahrain</span><span class="pcd-code">+973</span></div>
+<div class="pcd-item" data-code="+968" data-iso="om" data-name="Oman"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/om.png" alt="Oman" loading="lazy"><span class="pcd-item-name">Oman</span><span class="pcd-code">+968</span></div>
+<div class="pcd-item" data-code="+962" data-iso="jo" data-name="Jordan"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/jo.png" alt="Jordan" loading="lazy"><span class="pcd-item-name">Jordan</span><span class="pcd-code">+962</span></div>
+<div class="pcd-item" data-code="+961" data-iso="lb" data-name="Lebanon"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/lb.png" alt="Lebanon" loading="lazy"><span class="pcd-item-name">Lebanon</span><span class="pcd-code">+961</span></div>
+<div class="pcd-item" data-code="+972" data-iso="il" data-name="Israel"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/il.png" alt="Israel" loading="lazy"><span class="pcd-item-name">Israel</span><span class="pcd-code">+972</span></div>
+<div class="pcd-item" data-code="+90" data-iso="tr" data-name="Turkey"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/tr.png" alt="Turkey" loading="lazy"><span class="pcd-item-name">Turkey</span><span class="pcd-code">+90</span></div>
+<div class="pcd-item" data-code="+91" data-iso="in" data-name="India"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/in.png" alt="India" loading="lazy"><span class="pcd-item-name">India</span><span class="pcd-code">+91</span></div>
+<div class="pcd-item" data-code="+92" data-iso="pk" data-name="Pakistan"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/pk.png" alt="Pakistan" loading="lazy"><span class="pcd-item-name">Pakistan</span><span class="pcd-code">+92</span></div>
+<div class="pcd-item" data-code="+880" data-iso="bd" data-name="Bangladesh"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/bd.png" alt="Bangladesh" loading="lazy"><span class="pcd-item-name">Bangladesh</span><span class="pcd-code">+880</span></div>
+<div class="pcd-item" data-code="+94" data-iso="lk" data-name="Sri Lanka"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/lk.png" alt="Sri Lanka" loading="lazy"><span class="pcd-item-name">Sri Lanka</span><span class="pcd-code">+94</span></div>
+<div class="pcd-item" data-code="+977" data-iso="np" data-name="Nepal"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/np.png" alt="Nepal" loading="lazy"><span class="pcd-item-name">Nepal</span><span class="pcd-code">+977</span></div>
+<div class="pcd-item" data-code="+60" data-iso="my" data-name="Malaysia"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/my.png" alt="Malaysia" loading="lazy"><span class="pcd-item-name">Malaysia</span><span class="pcd-code">+60</span></div>
+<div class="pcd-item" data-code="+65" data-iso="sg" data-name="Singapore"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/sg.png" alt="Singapore" loading="lazy"><span class="pcd-item-name">Singapore</span><span class="pcd-code">+65</span></div>
+<div class="pcd-item" data-code="+63" data-iso="ph" data-name="Philippines"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ph.png" alt="Philippines" loading="lazy"><span class="pcd-item-name">Philippines</span><span class="pcd-code">+63</span></div>
+<div class="pcd-item" data-code="+66" data-iso="th" data-name="Thailand"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/th.png" alt="Thailand" loading="lazy"><span class="pcd-item-name">Thailand</span><span class="pcd-code">+66</span></div>
+<div class="pcd-item" data-code="+62" data-iso="id" data-name="Indonesia"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/id.png" alt="Indonesia" loading="lazy"><span class="pcd-item-name">Indonesia</span><span class="pcd-code">+62</span></div>
+<div class="pcd-item" data-code="+84" data-iso="vn" data-name="Vietnam"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/vn.png" alt="Vietnam" loading="lazy"><span class="pcd-item-name">Vietnam</span><span class="pcd-code">+84</span></div>
+<div class="pcd-item" data-code="+81" data-iso="jp" data-name="Japan"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/jp.png" alt="Japan" loading="lazy"><span class="pcd-item-name">Japan</span><span class="pcd-code">+81</span></div>
+<div class="pcd-item" data-code="+82" data-iso="kr" data-name="South Korea"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/kr.png" alt="South Korea" loading="lazy"><span class="pcd-item-name">South Korea</span><span class="pcd-code">+82</span></div>
+<div class="pcd-item" data-code="+86" data-iso="cn" data-name="China"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/cn.png" alt="China" loading="lazy"><span class="pcd-item-name">China</span><span class="pcd-code">+86</span></div>
+<div class="pcd-item" data-code="+852" data-iso="hk" data-name="Hong Kong"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/hk.png" alt="Hong Kong" loading="lazy"><span class="pcd-item-name">Hong Kong</span><span class="pcd-code">+852</span></div>
+<div class="pcd-item" data-code="+886" data-iso="tw" data-name="Taiwan"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/tw.png" alt="Taiwan" loading="lazy"><span class="pcd-item-name">Taiwan</span><span class="pcd-code">+886</span></div>
+<div class="pcd-item" data-code="+49" data-iso="de" data-name="Germany"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/de.png" alt="Germany" loading="lazy"><span class="pcd-item-name">Germany</span><span class="pcd-code">+49</span></div>
+<div class="pcd-item" data-code="+33" data-iso="fr" data-name="France"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/fr.png" alt="France" loading="lazy"><span class="pcd-item-name">France</span><span class="pcd-code">+33</span></div>
+<div class="pcd-item" data-code="+34" data-iso="es" data-name="Spain"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/es.png" alt="Spain" loading="lazy"><span class="pcd-item-name">Spain</span><span class="pcd-code">+34</span></div>
+<div class="pcd-item" data-code="+39" data-iso="it" data-name="Italy"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/it.png" alt="Italy" loading="lazy"><span class="pcd-item-name">Italy</span><span class="pcd-code">+39</span></div>
+<div class="pcd-item" data-code="+31" data-iso="nl" data-name="Netherlands"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/nl.png" alt="Netherlands" loading="lazy"><span class="pcd-item-name">Netherlands</span><span class="pcd-code">+31</span></div>
+<div class="pcd-item" data-code="+32" data-iso="be" data-name="Belgium"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/be.png" alt="Belgium" loading="lazy"><span class="pcd-item-name">Belgium</span><span class="pcd-code">+32</span></div>
+<div class="pcd-item" data-code="+41" data-iso="ch" data-name="Switzerland"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ch.png" alt="Switzerland" loading="lazy"><span class="pcd-item-name">Switzerland</span><span class="pcd-code">+41</span></div>
+<div class="pcd-item" data-code="+43" data-iso="at" data-name="Austria"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/at.png" alt="Austria" loading="lazy"><span class="pcd-item-name">Austria</span><span class="pcd-code">+43</span></div>
+<div class="pcd-item" data-code="+46" data-iso="se" data-name="Sweden"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/se.png" alt="Sweden" loading="lazy"><span class="pcd-item-name">Sweden</span><span class="pcd-code">+46</span></div>
+<div class="pcd-item" data-code="+47" data-iso="no" data-name="Norway"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/no.png" alt="Norway" loading="lazy"><span class="pcd-item-name">Norway</span><span class="pcd-code">+47</span></div>
+<div class="pcd-item" data-code="+45" data-iso="dk" data-name="Denmark"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/dk.png" alt="Denmark" loading="lazy"><span class="pcd-item-name">Denmark</span><span class="pcd-code">+45</span></div>
+<div class="pcd-item" data-code="+358" data-iso="fi" data-name="Finland"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/fi.png" alt="Finland" loading="lazy"><span class="pcd-item-name">Finland</span><span class="pcd-code">+358</span></div>
+<div class="pcd-item" data-code="+351" data-iso="pt" data-name="Portugal"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/pt.png" alt="Portugal" loading="lazy"><span class="pcd-item-name">Portugal</span><span class="pcd-code">+351</span></div>
+<div class="pcd-item" data-code="+30" data-iso="gr" data-name="Greece"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/gr.png" alt="Greece" loading="lazy"><span class="pcd-item-name">Greece</span><span class="pcd-code">+30</span></div>
+<div class="pcd-item" data-code="+48" data-iso="pl" data-name="Poland"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/pl.png" alt="Poland" loading="lazy"><span class="pcd-item-name">Poland</span><span class="pcd-code">+48</span></div>
+<div class="pcd-item" data-code="+420" data-iso="cz" data-name="Czech Republic"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/cz.png" alt="Czech Republic" loading="lazy"><span class="pcd-item-name">Czech Republic</span><span class="pcd-code">+420</span></div>
+<div class="pcd-item" data-code="+36" data-iso="hu" data-name="Hungary"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/hu.png" alt="Hungary" loading="lazy"><span class="pcd-item-name">Hungary</span><span class="pcd-code">+36</span></div>
+<div class="pcd-item" data-code="+40" data-iso="ro" data-name="Romania"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ro.png" alt="Romania" loading="lazy"><span class="pcd-item-name">Romania</span><span class="pcd-code">+40</span></div>
+<div class="pcd-item" data-code="+380" data-iso="ua" data-name="Ukraine"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ua.png" alt="Ukraine" loading="lazy"><span class="pcd-item-name">Ukraine</span><span class="pcd-code">+380</span></div>
+<div class="pcd-item" data-code="+7" data-iso="ru" data-name="Russia"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ru.png" alt="Russia" loading="lazy"><span class="pcd-item-name">Russia</span><span class="pcd-code">+7</span></div>
+<div class="pcd-item" data-code="+55" data-iso="br" data-name="Brazil"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/br.png" alt="Brazil" loading="lazy"><span class="pcd-item-name">Brazil</span><span class="pcd-code">+55</span></div>
+<div class="pcd-item" data-code="+52" data-iso="mx" data-name="Mexico"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/mx.png" alt="Mexico" loading="lazy"><span class="pcd-item-name">Mexico</span><span class="pcd-code">+52</span></div>
+<div class="pcd-item" data-code="+54" data-iso="ar" data-name="Argentina"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ar.png" alt="Argentina" loading="lazy"><span class="pcd-item-name">Argentina</span><span class="pcd-code">+54</span></div>
+<div class="pcd-item" data-code="+56" data-iso="cl" data-name="Chile"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/cl.png" alt="Chile" loading="lazy"><span class="pcd-item-name">Chile</span><span class="pcd-code">+56</span></div>
+<div class="pcd-item" data-code="+57" data-iso="co" data-name="Colombia"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/co.png" alt="Colombia" loading="lazy"><span class="pcd-item-name">Colombia</span><span class="pcd-code">+57</span></div>
+<div class="pcd-item" data-code="+51" data-iso="pe" data-name="Peru"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/pe.png" alt="Peru" loading="lazy"><span class="pcd-item-name">Peru</span><span class="pcd-code">+51</span></div>
+<div class="pcd-item" data-code="+58" data-iso="ve" data-name="Venezuela"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ve.png" alt="Venezuela" loading="lazy"><span class="pcd-item-name">Venezuela</span><span class="pcd-code">+58</span></div>
+<div class="pcd-item" data-code="+234" data-iso="ng" data-name="Nigeria"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ng.png" alt="Nigeria" loading="lazy"><span class="pcd-item-name">Nigeria</span><span class="pcd-code">+234</span></div>
+<div class="pcd-item" data-code="+254" data-iso="ke" data-name="Kenya"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ke.png" alt="Kenya" loading="lazy"><span class="pcd-item-name">Kenya</span><span class="pcd-code">+254</span></div>
+<div class="pcd-item" data-code="+233" data-iso="gh" data-name="Ghana"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/gh.png" alt="Ghana" loading="lazy"><span class="pcd-item-name">Ghana</span><span class="pcd-code">+233</span></div>
+<div class="pcd-item" data-code="+255" data-iso="tz" data-name="Tanzania"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/tz.png" alt="Tanzania" loading="lazy"><span class="pcd-item-name">Tanzania</span><span class="pcd-code">+255</span></div>
+<div class="pcd-item" data-code="+20" data-iso="eg" data-name="Egypt"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/eg.png" alt="Egypt" loading="lazy"><span class="pcd-item-name">Egypt</span><span class="pcd-code">+20</span></div>
+<div class="pcd-item" data-code="+212" data-iso="ma" data-name="Morocco"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ma.png" alt="Morocco" loading="lazy"><span class="pcd-item-name">Morocco</span><span class="pcd-code">+212</span></div>
+<div class="pcd-item" data-code="+213" data-iso="dz" data-name="Algeria"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/dz.png" alt="Algeria" loading="lazy"><span class="pcd-item-name">Algeria</span><span class="pcd-code">+213</span></div>
+<div class="pcd-item" data-code="+98" data-iso="ir" data-name="Iran"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/ir.png" alt="Iran" loading="lazy"><span class="pcd-item-name">Iran</span><span class="pcd-code">+98</span></div>
+<div class="pcd-item" data-code="+93" data-iso="af" data-name="Afghanistan"><img class="pcd-flag-img" src="https://flagcdn.com/20x15/af.png" alt="Afghanistan" loading="lazy"><span class="pcd-item-name">Afghanistan</span><span class="pcd-code">+93</span></div>
+      </div>
+    </div>
+  </div>
+  <input class="pcd-code-hidden" type="hidden" name="phone_code" value="+1">
+  <input type="tel" name="phone" placeholder="Enter phone number" required>
+</div>
+        <div class="pf-row"><div class="pf-g"><label>Preferred Date *</label><input type="date" name="date" required></div><div class="pf-g"><label>Preferred Time *</label><input type="time" name="time" required></div></div>
+        <div class="pf-g"><label>Your Timezone (auto-detected)</label><input type="text" name="timezone" id="tzField" readonly style="cursor:default;opacity:.65"></div>
+        <div class="pf-g"><label>Project Details</label><textarea name="message" rows="3" placeholder="What are you working on?"></textarea></div>
+        <div class="pf-g"><label>Budget Range</label><select name="budget"><option value="">Select budget range</option><option>$500 – $1,500</option><option>$1,500 – $5,000</option><option>$5,000 – $15,000</option><option>$15,000+</option></select></div>
+        <button type="submit" class="btn-primary btn-form-submit">Book My Free Strategy Call →</button>
+        <div class="form-st" id="consultSt"></div>
+      </form>
+    </div>
+  </div></div></section>
+</div>
+
+</div><!-- /app -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <a href="#" class="logo-mark" onclick="return nav('home')"><div class="logo-q">Q</div><span class="logo-name">Qweb <em>Marketing</em></span></a>
+        <p>Premium digital agency based in Buffalo, NY. We design, build, and market experiences that convert — with precision, creativity, and measurable results.</p>
+        <div class="ft-socials">
+          <a href="https://www.linkedin.com/company/qweb-marketing/" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://www.behance.net/qwebmarketing" target="_blank" aria-label="Behance"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.799 5.698c.589 0 1.12.051 1.606.156.482.102.894.273 1.241.507.344.235.612.546.804.938.188.387.281.871.281 1.443 0 .62-.14 1.138-.421 1.551-.284.413-.7.753-1.243 1.01.749.218 1.311.601 1.676 1.146.362.549.548 1.21.548 1.981 0 .623-.12 1.161-.359 1.612a3.257 3.257 0 01-.979 1.114 4.418 4.418 0 01-1.435.65 6.441 6.441 0 01-1.659.213H2V5.698h5.799zm-.351 4.763c.48 0 .878-.114 1.188-.341.308-.229.463-.583.463-1.07 0-.27-.049-.494-.147-.671a1.114 1.114 0 00-.394-.426 1.72 1.72 0 00-.571-.225 3.078 3.078 0 00-.682-.072H4.574v2.805h2.874zm.157 4.927c.267 0 .521-.025.76-.077.242-.053.455-.14.637-.261.182-.12.329-.283.44-.491.109-.207.163-.475.163-.798 0-.634-.179-1.085-.535-1.358-.356-.27-.829-.407-1.416-.407H4.574v3.392h3.031zM19.611 16.682c.352.343.863.515 1.523.515.474 0 .882-.119 1.225-.353.341-.237.55-.488.626-.756h2.371c-.379 1.178-.96 2.021-1.737 2.527-.779.504-1.723.757-2.827.757-.767 0-1.457-.123-2.071-.37a4.469 4.469 0 01-1.571-1.047 4.65 4.65 0 01-.989-1.611 5.8 5.8 0 01-.347-2.014c0-.72.118-1.386.357-2.002.239-.614.581-1.147 1.023-1.596a4.717 4.717 0 011.579-1.058c.613-.253 1.292-.381 2.04-.381.832 0 1.561.161 2.188.479.625.32 1.138.752 1.536 1.295.398.545.682 1.168.852 1.868.169.699.224 1.437.162 2.213h-7.072c.042.85.307 1.47.659 1.814zm2.657-4.826c-.283-.312-.73-.468-1.337-.468-.389 0-.714.065-.972.196a1.894 1.894 0 00-.635.499 1.887 1.887 0 00-.336.664c-.065.237-.105.473-.117.708h3.969c-.107-.68-.289-1.287-.572-1.599zM16.35 8.749h4.543V7.5H16.35v1.249z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2.5"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61580533795315" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div class="ft-col"><h4>Quick Links</h4><ul><li><a href="#" onclick="return nav('home')">Home</a></li><li><a href="#" onclick="return nav('about')">About Us</a></li><li><a href="#" onclick="return nav('services')">Services</a></li><li><a href="#" onclick="return nav('portfolio')">Portfolio</a></li><li><a href="#" onclick="return nav('contact')">Contact</a></li></ul></div>
+      <div class="ft-col"><h4>Services</h4><ul><li><a href="#" onclick="return nav('service-wordpress')">WordPress Design</a></li><li><a href="#" onclick="return nav('service-shopify')">Shopify Development</a></li><li><a href="#" onclick="return nav('service-webflow')">Webflow Development</a></li><li><a href="#" onclick="return nav('service-seo')">SEO Services</a></li><li><a href="#" onclick="return nav('service-smm')">Social Media Marketing</a></li><li><a href="#" onclick="return nav('service-graphics')">Graphics Design</a></li></ul></div>
+      <div class="ft-col"><h4>Contact</h4><p>📍 79 Theodore St., Buffalo, NY</p><p>📱 <a href="https://wa.me/17165734618">+1 (716) 573-4618</a></p><p>✉️ <a href="mailto:qweb.marketings@gmail.com">qweb.marketings@gmail.com</a></p><div style="margin-top:1.5rem"><a href="#" class="btn-primary btn-sm" onclick="return nav('consultancy')" style="color:#fff!important">Book Free Call →</a></div></div>
+    </div>
+    <div class="ft-bottom"><p>© 2025 Qweb Marketing. All rights reserved. | 79 Theodore St., Buffalo, NY</p><p>Web Design &amp; Digital Marketing Agency – Buffalo, NY</p></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
