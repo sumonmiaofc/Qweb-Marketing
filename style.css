@@ -1135,3 +1135,96 @@ a[onclick*="hotdeals"]:hover{text-shadow:0 0 12px rgba(255,107,43,.5)}
   .hd-table{font-size:.8rem}
   .hd-td{padding:10px 12px}
 }
+
+/* ════════════════════════════════
+   DISCOUNT BANNERS
+════════════════════════════════ */
+
+/* ── HOME PAGE discount banner ── */
+.discount-banner{
+  margin-bottom:1.75rem;
+  background:linear-gradient(135deg,rgba(255,107,43,.1),rgba(255,143,90,.06));
+  border:1px solid rgba(255,107,43,.3);
+  border-radius:14px;
+  padding:14px 18px;
+  position:relative;
+  overflow:hidden;
+  animation:discountPulse 3s ease-in-out infinite;
+}
+.discount-banner::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,107,43,.6),transparent);
+}
+@keyframes discountPulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(255,107,43,.12)}
+  50%{box-shadow:0 0 0 6px rgba(255,107,43,0)}
+}
+.discount-inner{display:flex;align-items:center;gap:12px}
+.discount-fire{font-size:1.25rem;flex-shrink:0;animation:hdFlame .6s ease-in-out infinite alternate}
+.discount-text{flex:1;display:flex;flex-direction:column;gap:2px}
+.discount-text strong{font-family:var(--fh);font-size:.88rem;font-weight:700;color:var(--white)}
+.discount-text span{font-size:.8rem;color:var(--muted)}
+.discount-mark{
+  background:linear-gradient(135deg,#FF6B2B,#ff8f5a);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+  font-family:var(--fh);font-weight:800;font-size:.95rem;
+  text-decoration:none;
+}
+.discount-cta{
+  display:inline-flex;align-items:center;
+  background:linear-gradient(135deg,#FF6B2B,#ff8f5a);
+  color:#fff!important;
+  font-family:var(--fh);font-size:.78rem;font-weight:700;
+  padding:7px 16px;border-radius:50px;
+  white-space:nowrap;flex-shrink:0;
+  transition:transform .3s,box-shadow .3s;
+  box-shadow:0 4px 14px rgba(255,107,43,.3);
+}
+.discount-cta:hover{transform:translateY(-2px);box-shadow:0 7px 20px rgba(255,107,43,.4)}
+
+/* ── HOT DEALS PAGE discount strip ── */
+.hd-discount-strip{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  background:linear-gradient(135deg,rgba(255,107,43,.12),rgba(255,143,90,.07));
+  border:1px solid rgba(255,107,43,.35);
+  border-radius:16px;
+  padding:18px 22px;
+  margin-bottom:1.75rem;
+  max-width:680px;margin-left:auto;margin-right:auto;
+  position:relative;overflow:hidden;
+  animation:discountPulse 3s ease-in-out infinite;
+}
+.hd-discount-strip::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,107,43,.7),transparent);
+}
+.hd-ds-left{display:flex;align-items:center;gap:14px}
+.hd-ds-pct{
+  font-family:var(--fh);font-size:2.2rem;font-weight:800;
+  background:linear-gradient(135deg,#FF6B2B,#ff8f5a);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;line-height:1;flex-shrink:0;
+}
+.hd-ds-info{display:flex;flex-direction:column;gap:3px}
+.hd-ds-info strong{font-family:var(--fh);font-size:.92rem;font-weight:700;color:var(--white)}
+.hd-ds-info span{font-size:.8rem;color:var(--muted);line-height:1.4}
+.hd-ds-btn{
+  display:inline-flex;align-items:center;
+  background:linear-gradient(135deg,#FF6B2B,#ff8f5a);
+  color:#fff!important;
+  font-family:var(--fh);font-size:.85rem;font-weight:700;
+  padding:10px 22px;border-radius:50px;
+  white-space:nowrap;flex-shrink:0;
+  transition:transform .3s,box-shadow .3s;
+  box-shadow:0 4px 16px rgba(255,107,43,.35);
+}
+.hd-ds-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,107,43,.45)}
+
+@media(max-width:600px){
+  .discount-inner{flex-wrap:wrap}
+  .discount-cta{width:100%;justify-content:center}
+  .hd-discount-strip{flex-direction:column;text-align:center}
+  .hd-ds-left{flex-direction:column;text-align:center}
+  .hd-ds-btn{width:100%;justify-content:center}
+}

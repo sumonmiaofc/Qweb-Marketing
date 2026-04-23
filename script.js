@@ -737,27 +737,7 @@ function initSvcParticles(id) {
 
 // ── PAGE ROUTER ──
 function nav(id) {
-  // Update browser URL
-  const slugMap = {
-    'home': '/',
-    'about': '/about-us',
-    'services': '/services',
-    'portfolio': '/portfolio',
-    'contact': '/contact',
-    'consultancy': '/book-free-call',
-    'hotdeals': '/hot-deals',
-  };
-  const slug = slugMap[id] || (id.startsWith('service-') ? '/services/' + id.replace('service-','') : '/' + id);
-  window.history.pushState({ page: id }, '', slug);
-
   document.querySelectorAll('.pg').forEach(p => p.classList.remove('active'));
-
-  // Handle browser back/forward buttons
-window.addEventListener('popstate', (e) => {
-  const id = e.state?.page || 'home';
-  nav(id);
-});
-
   if (svcIds.includes(id)) {
     const c = document.getElementById('svc-container');
     buildSvcPage(id, c);
@@ -1083,7 +1063,35 @@ gs.textContent = `
 document.head.appendChild(gs);
 
 
-// ── HOT DEALS COUNTDOWN ──
+// ── DISCOUNT CLAIM — goes to contact form, auto-selects service & adds note
+function navToDiscount() {
+  nav('contact');
+  setTimeout(() => {
+    // Auto-select service dropdown
+    const serviceSelect = document.querySelector('#contactForm select[name="service"]');
+    if (serviceSelect) {
+      // Find the "Multiple Services" or first option and set discount note
+      serviceSelect.value = 'Website Design';
+      // If exact value not found, try to find closest match
+      const opts = Array.from(serviceSelect.options);
+      const match = opts.find(o => o.value.toLowerCase().includes('wordpress') || o.value.toLowerCase().includes('website'));
+      if (match) serviceSelect.value = match.value;
+      // Trigger change event for validation
+      serviceSelect.dispatchEvent(new Event('change'));
+    }
+    // Pre-fill message with discount note
+    const msgField = document.querySelector('#contactForm textarea[name="message"]');
+    if (msgField && !msgField.value) {
+      msgField.value = 'Hi! I would like to claim the 10% First Order Discount on my website project.';
+    }
+    // Smooth scroll to form
+    const form = document.getElementById('contactForm');
+    if (form) setTimeout(() => form.scrollIntoView({ behavior: 'smooth', block: 'center' }), 200);
+  }, 300);
+  return false;
+}
+
+
 function initHotDealsCountdown() {
   const el = document.getElementById('hdCountdown');
   if (!el) return;
