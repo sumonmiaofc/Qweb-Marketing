@@ -750,7 +750,7 @@ function nav(id) {
   closeNav();
   document.querySelectorAll('[data-p]').forEach(a => a.classList.toggle('on', a.dataset.p === id));
   setTimeout(forceRevealActive, 60);
-  setTimeout(() => { startReveal(); startCounters(); initFAQ(); }, 150);
+  setTimeout(() => { startReveal(); startCounters(); initFAQ(); initHotDealsCountdown(); }, 150);
   return false;
 }
 
@@ -1061,6 +1061,29 @@ gs.textContent = `
   .hero-h1 .grad{font-style:normal}
 `;
 document.head.appendChild(gs);
+
+
+// ── HOT DEALS COUNTDOWN ──
+function initHotDealsCountdown() {
+  const el = document.getElementById('hdCountdown');
+  if (!el) return;
+  const KEY = 'qweb_deal_end';
+  let end = localStorage.getItem(KEY);
+  if (!end || isNaN(parseInt(end))) {
+    end = Date.now() + 48 * 60 * 60 * 1000;
+    localStorage.setItem(KEY, end);
+  }
+  function tick() {
+    const diff = parseInt(end) - Date.now();
+    if (diff <= 0) { el.textContent = 'ENDED'; return; }
+    const h = Math.floor(diff / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    el.textContent = String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+    setTimeout(tick, 1000);
+  }
+  tick();
+}
 
 // ── CUSTOM PHONE DROPDOWN ──
 function togglePCD(trigger) {
