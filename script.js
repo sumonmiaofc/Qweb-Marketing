@@ -737,27 +737,7 @@ function initSvcParticles(id) {
 
 // ── PAGE ROUTER ──
 function nav(id) {
-  // Update browser URL
-  const slugMap = {
-    'home': '/',
-    'about': '/about-us',
-    'services': '/services',
-    'portfolio': '/portfolio',
-    'contact': '/contact',
-    'consultancy': '/book-free-call',
-    'hotdeals': '/hot-deals',
-  };
-  const slug = slugMap[id] || (id.startsWith('service-') ? '/services/' + id.replace('service-','') : '/' + id);
-  window.history.pushState({ page: id }, '', slug);
-
   document.querySelectorAll('.pg').forEach(p => p.classList.remove('active'));
-
-  // Handle browser back/forward buttons
-window.addEventListener('popstate', (e) => {
-  const id = e.state?.page || 'home';
-  nav(id);
-});
-
   if (svcIds.includes(id)) {
     const c = document.getElementById('svc-container');
     buildSvcPage(id, c);
