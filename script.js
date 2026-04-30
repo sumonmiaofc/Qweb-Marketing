@@ -737,27 +737,37 @@ function initSvcParticles(id) {
 
 // ── PAGE ROUTER ──
 function nav(id) {
-  // Update browser URL
-  const slugMap = {
-    'home': '/',
-    'about': '/about-us',
-    'services': '/services',
-    'portfolio': '/portfolio',
-    'contact': '/contact',
-    'consultancy': '/book-free-call',
-    'hotdeals': '/hot-deals',
-  };
-  const slug = slugMap[id] || (id.startsWith('service-') ? '/services/' + id.replace('service-','') : '/' + id);
-  window.history.pushState({ page: id }, '', slug);
+  // Save page to localStorage — works on ALL environments
+  try { sessionStorage.setItem('qweb_page', id); } catch(e) {}
+
+  // Update URL — but ONLY if on a real server (not Live Server / file://)
+  // Live Server does not support SPA routing, so we skip URL changes there
+  try {
+    const isLiveServer = window.location.port === '5500' || 
+                         window.location.port === '5501' ||
+                         window.location.protocol === 'file:';
+    if (!isLiveServer) {
+      const idToSlug = {
+        'home':'/', 'about':'/about-us', 'services':'/services',
+        'portfolio':'/portfolio', 'contact':'/contact',
+        'consultancy':'/book-free-call', 'hotdeals':'/hot-deals',
+        'service-wordpress':'/services/wordpress',
+        'service-wix':'/services/wix',
+        'service-webflow':'/services/webflow',
+        'service-shopify':'/services/shopify',
+        'service-framer':'/services/framer',
+        'service-smm':'/services/smm',
+        'service-seo':'/services/seo',
+        'service-graphics':'/services/graphics',
+        'service-email':'/services/email',
+        'service-video':'/services/video'
+      };
+      const slug = idToSlug[id] || '/';
+      window.history.pushState({ page: id }, '', slug);
+    }
+  } catch(e) {}
 
   document.querySelectorAll('.pg').forEach(p => p.classList.remove('active'));
-
-  // Handle browser back/forward buttons
-window.addEventListener('popstate', (e) => {
-  const id = e.state?.page || 'home';
-  nav(id);
-});
-
   if (svcIds.includes(id)) {
     const c = document.getElementById('svc-container');
     buildSvcPage(id, c);
@@ -783,6 +793,61 @@ function forceRevealActive() {
     const rect = el.getBoundingClientRect();
     if (rect.top < vh + 300) el.classList.add('vis');
   });
+}
+
+
+// ── BROWSER BACK/FORWARD BUTTON ──
+window.addEventListener('popstate', function(e) {
+  const id = e.state && e.state.page ? e.state.page : getPageFromURL();
+  navDirect(id); // navigate without pushing state again
+});
+
+// Navigate without pushing new history state (for popstate)
+function navDirect(id) {
+  try { sessionStorage.setItem('qweb_page', id); } catch(e) {}
+  document.querySelectorAll('.pg').forEach(p => p.classList.remove('active'));
+  const svcIds = Object.keys(SD);
+  if (svcIds.includes(id)) {
+    const c = document.getElementById('svc-container');
+    buildSvcPage(id, c);
+    c.classList.add('active');
+  } else {
+    const el = document.getElementById('pg-' + id);
+    if (el) el.classList.add('active');
+  }
+  window.scrollTo({top:0, behavior:'smooth'});
+  document.querySelectorAll('[data-p]').forEach(a => a.classList.toggle('on', a.dataset.p === id));
+  setTimeout(forceRevealActive, 60);
+  setTimeout(() => { startReveal(); startCounters(); initFAQ(); initHotDealsCountdown(); }, 150);
+}
+
+// Get page id from current URL path
+function getPageFromURL() {
+  const slugMap = {
+  '/': 'home',
+  '/home': 'home',
+  '/about': 'about',
+  '/about-us': 'about',
+  '/services': 'services',
+  '/portfolio': 'portfolio',
+  '/contact': 'contact',
+  '/book-free-call': 'consultancy',
+  '/consultancy': 'consultancy',
+  '/hot-deals': 'hotdeals',
+  '/hotdeals': 'hotdeals',
+  '/services/wordpress': 'service-wordpress',
+  '/services/wix': 'service-wix',
+  '/services/webflow': 'service-webflow',
+  '/services/shopify': 'service-shopify',
+  '/services/framer': 'service-framer',
+  '/services/smm': 'service-smm',
+  '/services/seo': 'service-seo',
+  '/services/graphics': 'service-graphics',
+  '/services/email': 'service-email',
+  '/services/video': 'service-video'
+};
+  const path = window.location.pathname.replace(/\/+$/, '') || '/';
+  return slugMap[path] || 'home';
 }
 
 // ── HEADER ──
@@ -1111,6 +1176,39 @@ function navToDiscount() {
   return false;
 }
 
+// ── PACKAGE CTA — contact form with package auto-fill
+function navToPackage(pkg) {
+  nav('contact');
+  setTimeout(() => {
+    // Auto-select service
+    const serviceSelect = document.querySelector('#contactForm select[name="service"]');
+    if (serviceSelect) {
+      const opts = Array.from(serviceSelect.options);
+      const exact = opts.find(o => o.value === pkg);
+      if (exact) {
+        serviceSelect.value = exact.value;
+      } else {
+        // Add option dynamically if not in list
+        const opt = document.createElement('option');
+        opt.value = pkg;
+        opt.textContent = pkg;
+        serviceSelect.appendChild(opt);
+        serviceSelect.value = pkg;
+      }
+      serviceSelect.dispatchEvent(new Event('change'));
+    }
+    // Pre-fill message
+    const msgField = document.querySelector('#contactForm textarea[name="message"]');
+    if (msgField) {
+      msgField.value = `Hi! I'm interested in the ${pkg} for my website project. Please get in touch to discuss the details.`;
+    }
+    // Scroll to form
+    const form = document.getElementById('contactForm');
+    if (form) setTimeout(() => form.scrollIntoView({ behavior: 'smooth', block: 'center' }), 200);
+  }, 350);
+  return false;
+}
+
 
 function initHotDealsCountdown() {
   const el = document.getElementById('hdCountdown');
@@ -1187,6 +1285,27 @@ document.addEventListener('click', e => {
 
 // ── INIT ──
 document.addEventListener('DOMContentLoaded', () => {
+
+  // ── RESTORE PAGE ON RELOAD ──
+  let startPage = 'home';
+  try {
+    const isLiveServer = window.location.port === '5500' ||
+                         window.location.port === '5501' ||
+                         window.location.protocol === 'file:';
+    if (!isLiveServer) {
+      const fromURL = getPageFromURL();
+      startPage = (fromURL && fromURL !== 'home') ? fromURL : (sessionStorage.getItem('qweb_page') || 'home');
+    } else {
+      startPage = sessionStorage.getItem('qweb_page') || 'home';
+    }
+  } catch(e) { startPage = 'home'; }
+
+  if (startPage && startPage !== 'home') {
+    navDirect(startPage);
+  } else {
+    try { sessionStorage.setItem('qweb_page', 'home'); } catch(e) {}
+  }
+
   forceRevealActive();
   startReveal();
   startCounters();
@@ -1211,7 +1330,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const statsBar = document.querySelector('#pg-home .hero-statsbar');
   if (statsBar) setTimeout(()=>statsBar.classList.add('vis'), 580);
 
-  // Hard failsafe: after 2s, force reveal everything visible on active page
+  // Hard failsafe: after 2s, force reveal everything on active page
   setTimeout(()=>{
     document.querySelectorAll('.pg.active .reveal').forEach(el=>el.classList.add('vis'));
   }, 2000);

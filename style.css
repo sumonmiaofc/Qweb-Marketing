@@ -24,8 +24,8 @@
 }
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:var(--fb);font-size:16px;line-height:1.7;overflow-x:hidden}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{overflow-x:hidden;background:var(--bg);color:var(--text);font-family:var(--fb);font-size:16px;line-height:1.7;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 ul{list-style:none}
@@ -1095,6 +1095,7 @@ input:focus,textarea:focus,select:focus{
 .hd-plat{background:var(--card);border:1px solid var(--bdr);border-radius:var(--r);padding:22px 16px;text-align:center;transition:all .3s var(--ease)}
 .hd-plat:hover{transform:translateY(-4px);border-color:var(--bdr-b)}
 .hd-plat-ico{width:50px;height:50px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:900;font-size:.9rem;color:#fff;margin:0 auto .875rem;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+.hd-plat-ico svg{width:28px;height:28px;display:block;flex-shrink:0}
 .hd-plat h4{font-family:var(--fh);font-size:.9rem;font-weight:700;margin-bottom:.35rem}
 .hd-plat p{font-size:.78rem;color:var(--muted);line-height:1.55}
 .hd-ecom-tag{display:inline-block;background:rgba(150,191,72,.1);border:1px solid rgba(150,191,72,.25);color:#96bf48;font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:50px;margin-top:.5rem;letter-spacing:.05em;text-transform:uppercase}
@@ -1125,52 +1126,61 @@ input:focus,textarea:focus,select:focus{
 a[onclick*="hotdeals"]:hover{text-shadow:0 0 12px rgba(255,107,43,.5)}
 
 /* Responsive */
-@media(max-width:768px){
-  .hd-cards{grid-template-columns:1fr}
-  .hd-plat-grid{grid-template-columns:repeat(3,1fr)}
-  .hd-card-inner{padding:22px 18px}
-  .hd-hero{padding:60px 5% 40px}
-  .hd-h1{font-size:clamp(1.8rem,7vw,2.8rem)}
-  .hd-sub{font-size:.9rem}
-  .hd-amt{font-size:2.4rem}
-  .hd-badge-pop,.hd-badge-val{top:14px;right:14px;font-size:.65rem;padding:4px 10px}
-  .hd-pkg-name{font-size:1.15rem}
-  .hd-feat{font-size:.82rem}
-  .hd-cta{font-size:.88rem;padding:13px}
-  .hd-discount-strip{flex-direction:column;text-align:center;gap:.875rem;padding:16px}
-  .hd-ds-left{flex-direction:column;align-items:center;gap:8px}
-  .hd-ds-btn{width:100%;justify-content:center}
-  .hd-trust-inner{gap:.625rem}
-  .hd-trust-item{font-size:.78rem;padding:8px 14px}
-  /* Table: hide feature column on small screens */
-  .hd-table-head,.hd-tr{grid-template-columns:1.4fr 1fr 1fr}
-  .hd-th,.hd-td{padding:11px 10px;font-size:.78rem}
-  /* Countdown */
-  .hd-countdown-wrap{font-size:.78rem;padding:7px 14px}
-  /* Pills */
-  .hd-pills{gap:.375rem}
-  .hd-pill{font-size:.72rem;padding:5px 10px}
+/* ── HOT DEALS FULL MOBILE FIX ── */
+@media(max-width:900px){
+  /* Prevent ALL horizontal overflow on hot deals page */
+  #pg-hotdeals{overflow-x:hidden;max-width:100vw}
+  #pg-hotdeals .container{overflow-x:hidden}
+  .hd-orb-orange{display:none} /* orb was causing overflow */
 }
-@media(max-width:480px){
-  .hd-plat-grid{grid-template-columns:1fr 1fr}
-  .hd-table{font-size:.76rem}
-  .hd-td{padding:9px 8px}
-  .hd-th{padding:11px 8px;font-size:.72rem}
-  .hd-card-inner{padding:18px 14px}
-  .hd-amt{font-size:2.2rem}
-  .hd-price{flex-wrap:wrap;gap:4px}
-  .hd-sfx{font-size:.72rem}
-  .hd-pkg-type{font-size:.68rem}
-  .hd-hot-badge{font-size:.72rem;padding:6px 14px}
-  /* Stack table rows better */
-  .hd-table-head,.hd-tr{grid-template-columns:1.2fr 1fr 1fr}
-  /* Plat cards */
-  .hd-plat{padding:16px 12px}
-  .hd-plat-ico{width:42px;height:42px;font-size:.82rem}
+@media(max-width:768px){
+  .hd-cards{grid-template-columns:1fr;gap:1.25rem}
+  .hd-plat-grid{grid-template-columns:repeat(3,1fr);gap:.75rem}
+  .hd-card-inner{padding:20px 16px}
+  .hd-hero{padding:56px 5% 36px;overflow:hidden}
+  .hd-hero-inner{max-width:100%;overflow:hidden}
+  .hd-h1{font-size:clamp(1.75rem,6.5vw,2.6rem);word-break:break-word}
+  .hd-sub{font-size:.875rem;max-width:100%}
+  .hd-amt{font-size:2.4rem}
+  .hd-badge-pop,.hd-badge-val{top:12px;right:12px;font-size:.62rem;padding:4px 9px;white-space:nowrap}
+  .hd-pkg-name{font-size:1.1rem}
+  .hd-feat{font-size:.82rem;gap:8px}
+  .hd-cta{font-size:.88rem;padding:13px}
+  .hd-discount-strip{flex-direction:column;text-align:center;gap:.75rem;padding:14px 16px;width:100%;box-sizing:border-box}
+  .hd-ds-left{flex-direction:column;align-items:center;gap:6px}
+  .hd-ds-pct{font-size:1.8rem}
+  .hd-ds-btn{width:100%;justify-content:center}
+  .hd-trust-inner{gap:.5rem;flex-wrap:wrap}
+  .hd-trust-item{font-size:.75rem;padding:7px 12px}
+  /* Table: fit in screen */
+  .hd-table{overflow-x:hidden}
+  .hd-table-head,.hd-tr{grid-template-columns:1.5fr 1fr 1fr}
+  .hd-th,.hd-td{padding:10px 8px;font-size:.75rem}
+  .hd-th:first-child,.hd-td:first-child{font-size:.75rem}
+  /* Countdown */
+  .hd-countdown-wrap{font-size:.75rem;padding:7px 12px;white-space:normal;text-align:center}
+  /* Pills */
+  .hd-pills{gap:.35rem;justify-content:center}
+  .hd-pill{font-size:.7rem;padding:5px 9px}
+  /* Sec label */
+  .hd-sec-label{font-size:.7rem}
+  /* Plat grid */
+  .hd-plat{padding:14px 10px}
+  .hd-plat-ico{width:44px;height:44px;font-size:.85rem;margin-bottom:.6rem}
   .hd-plat h4{font-size:.82rem}
   .hd-plat p{font-size:.72rem}
-  /* Trust strip stack */
-  .hd-trust-inner{flex-direction:column;align-items:center}
+}
+@media(max-width:540px){
+  .hd-plat-grid{grid-template-columns:1fr 1fr}
+  .hd-table-head,.hd-tr{grid-template-columns:1.3fr 1fr 1fr}
+  .hd-th,.hd-td{padding:9px 6px;font-size:.7rem}
+  .hd-card-inner{padding:16px 14px}
+  .hd-amt{font-size:2.1rem}
+  .hd-price{flex-wrap:wrap;gap:4px}
+  .hd-sfx{font-size:.7rem;width:100%}
+  .hd-hot-badge{font-size:.7rem;padding:6px 12px;letter-spacing:.06em}
+  .hd-trust-inner{flex-direction:column;align-items:center;gap:.4rem}
+  .hd-sec-label::before,.hd-sec-label::after{max-width:40px}
 }
 
 /* ════════════════════════════════
